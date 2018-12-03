@@ -1,60 +1,86 @@
-# set mod as the windows key
+# set windows key as mod
 set $mod Mod4
 
-# set thickness of the window bar
-new_window pixel 4
 
-# volume keys
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+### CUSOM BINDINGS ###
+# control the volume keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 
-# screen brightness controls
+# control screen brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-# set background
+# rofi run and drun
+bindsym $mod+p exec rofi -show drun -show-icons -theme Monokai by milouse
+bindsym $mod+d exec rofi -show run -theme Monokai by milouse
+
+# binding for printscreen
+bindsym $mod+Print exec mate-screenshot
+
+
+### COMPUTER STATE CONTROL ###
+# restart i3
+bindsym $mod+Shift+r restart
+
+# logout
+bindsym $mod+Shift+e exec i3-msg exit
+
+# poweroff
+bindsym $mod+Shift+o exec poweroff
+
+# reboot
+bindsym $mod+Shift+p exec reboot
+
+
+### VISUALS ###
+# set thickness of the i3 window bar
+new_window pixel 4
+
+# set background to a random picture
 exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
 
-# touchpad settings 
-exec xinput set-prop 14 285 1
-exec xinput set-prop 14 295 0
 
+### PROGRAM, SCRIPT STARTUP AND OTHER CONFIGS ###
+# start compton, battery notification script and touchegg
+exec --no-startup-id compton
+exec --no-startup-id touchegg
+exec --no-startup-id fish /opt/batteryNotification.sh
+
+# change touchpad settings (for tap to touch)
+exec xinput set-prop 14 287 1
+
+# set win-space to toggle between cz and us keyboards
+exec setxkbmap -option grp:win_space_toggle us,cz_qwerty
+
+# launch programs using alt+...
+bindsym Mod1+x exec --no-startup-id xournal
+bindsym Mod1+f exec --no-startup-id firefox
+bindsym Mod1+a exec --no-startup-id atom
+bindsym Mod1+g exec --no-startup-id gitkraken
+bindsym Mod1+p exec --no-startup-id pragha
+bindsym Mod1+i exec --no-startup-id inkscape
+bindsym Mod1+v exec --no-startup-id vlc
+
+
+### OTHER ###
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec mate-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# set switching layouts
-exec setxkbmap -option grp:alt_shift_toggle us,cz_qwerty
-
-# start rofi
-bindsym $mod+p exec rofi -show drun -show-icons -theme Monokai by milouse
-bindsym $mod+d exec rofi -show run -theme Monokai by milouse
-
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
+# change focused window
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -75,16 +101,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+f floating toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 set $ws1 "1"
@@ -121,18 +141,6 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
-
-# restart i3
-bindsym $mod+Shift+r restart
-
-# logout
-bindsym $mod+Shift+e exec i3-msg exit
-
-# poweroff
-bindsym $mod+Shift+o exec poweroff
-
-# reboot
-bindsym $mod+Shift+i exec reboot
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

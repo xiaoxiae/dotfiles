@@ -1,3 +1,3 @@
 function c
-	eval (cd (fzf --preview='head -$LINES {}' | sed "s/\/[^\/]\+\$//"))
+	eval (cd (pwd | fd -a . | fzf | sed "s/\/[^\/]\+\$//"))
 end
