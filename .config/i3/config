@@ -22,16 +22,16 @@ bindsym $mod+Print exec mate-screenshot
 
 ### COMPUTER STATE CONTROL ###
 # restart i3
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r exec restart
 
 # logout
-bindsym $mod+Shift+e exec i3-msg exit
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you realy want to logout?' -b 'Yes' 'i3-msg exit'"
 
 # poweroff
-bindsym $mod+Shift+o exec poweroff
+bindsym $mod+Shift+o exec "i3-nagbar -t warning -m 'Do you realy want to poweroff?' -b 'Yes' 'poweroff'"
 
 # reboot
-bindsym $mod+Shift+p exec reboot
+bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'Do you realy want to reboot?' -b 'Yes' 'reboot'"
 
 
 ### VISUALS ###
@@ -47,6 +47,8 @@ exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
 exec --no-startup-id compton
 exec --no-startup-id touchegg
 exec --no-startup-id fish /opt/batteryNotification.sh
+exec --no-startup-id nm-applet
+exec --no-startup-id syncthing
 
 # change touchpad settings (for tap to touch)
 exec xinput set-prop 14 287 1
@@ -54,7 +56,7 @@ exec xinput set-prop 14 287 1
 # set win-space to toggle between cz and us keyboards
 exec setxkbmap -option grp:win_space_toggle us,cz_qwerty
 
-# launch programs using alt+...
+# launch programs using alt + ...
 bindsym Mod1+x exec --no-startup-id xournal
 bindsym Mod1+f exec --no-startup-id firefox
 bindsym Mod1+a exec --no-startup-id atom
