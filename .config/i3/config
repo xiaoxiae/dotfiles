@@ -22,7 +22,7 @@ bindsym $mod+Print exec mate-screenshot
 
 ### COMPUTER STATE CONTROL ###
 # restart i3
-bindsym $mod+Shift+r exec restart
+bindsym $mod+Shift+r restart
 
 # logout
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you realy want to logout?' -b 'Yes' 'i3-msg exit'"
