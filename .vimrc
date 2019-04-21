@@ -40,4 +40,5 @@ set t_vb=
 " for vimwiki plugin
 set nocompatible
 filetype plugin on
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+let g:vimwiki_list = [{'path': '~/Wiki/', 'syntax': 'markdown', 'ext': '.md'}]
