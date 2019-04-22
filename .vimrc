@@ -1,16 +1,25 @@
-let mapleader=","  " change leader to ,
+set nocompatible  " settings for vim, not vi!
 
+set encoding=utf-8  " set encoding to UTF-8
+let mapleader=","   " change leader to ,
+
+
+" === VISUALS === "
 colo badwolf  " color scheme
 syntax on     " syntax highlighting
-set cursorline  " highlight the current line
 
+set cursorline  " highlight the current line
+set nu rnu  " hybrid line numbering
+
+set lazyredraw  " don't redraw when it's necessary 
+
+
+" === TABS === "
 set tabstop=4  " 4 spaces as a tab
 set expandtab  " make tabs spaces
 
 set shiftwidth=4            " 4 inserted spaces when indenting
 set smartindent autoindent  " smarter, automatic indenting
-
-set nu rnu  " hybrid line numbering
 
 set nowrap    " disable word wrap
 set linebreak " enable linebreak when word wrap is enabled
@@ -18,27 +27,42 @@ set linebreak " enable linebreak when word wrap is enabled
 set showcmd   " shows last issued command
 set wildmenu  " show command suggestions
 
-" search settings
-set incsearch
-set hlsearch
-set ignorecase
+
+" === SEARCH === "
+set incsearch   " search as we type
+set hlsearch    " highlight search
+set ignorecase  " ignore search case...
+set smartcase   " ...unless we type a capital
+
+" hide search results with leader + space
 nnoremap <leader><space> :nohlsearch<CR>
 
-set lazyredraw  " don't redraw when it's necessary 
+
+" === EDITING === "
 " don't skip wrapped lines
 nnoremap j gj
 nnoremap k gk
 
+
+" === TEMPORARY === "
+" disable up/down/left/right keys for better habbits
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+
+" === MISCELLANEOUS === "
 set history=1000  " more history!
 
-set autochdir " automatically changes dir
+set autochdir " automatically change dir to current file
 
 " disable the bells
 set visualbell
 set t_vb=
 
-" for vimwiki plugin
-set nocompatible
-filetype plugin on
 
+" === PlUGINS === "
+" vimwiki plugin settings
+filetype plugin on
 let g:vimwiki_list = [{'path': '~/Wiki/', 'syntax': 'markdown', 'ext': '.md'}]
