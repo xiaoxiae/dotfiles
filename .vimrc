@@ -9,10 +9,10 @@ colo badwolf  " color scheme
 syntax on     " syntax highlighting
 
 set cursorline  " highlight the current line
-set nu rnu  " hybrid line numbering
+set nu rnu      " hybrid line numbering
 
 set lazyredraw  " don't redraw when it's necessary 
-
+set timeoutlen=1000 ttimeoutlen=0  " no delay after exiting visual mode
 
 " === TABS === "
 set tabstop=4  " 4 spaces as a tab
@@ -21,8 +21,9 @@ set expandtab  " make tabs spaces
 set shiftwidth=4            " 4 inserted spaces when indenting
 set smartindent autoindent  " smarter, automatic indenting
 
-set nowrap    " disable word wrap
-set linebreak " enable linebreak when word wrap is enabled
+set nowrap       " disable word wrap
+set linebreak    " break on words if wrap is enabled
+set breakindent  " indent broken lines if wrap is enabled
 
 set showcmd   " shows last issued command
 set wildmenu  " show command suggestions
@@ -57,7 +58,7 @@ set history=1000  " more history!
 
 set autochdir " automatically change dir to current file
 
-" disable the bells
+" disable bells
 set visualbell
 set t_vb=
 
