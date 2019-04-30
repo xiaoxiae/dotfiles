@@ -53,7 +53,7 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id blueberry-tray
 
 # change touchpad settings (for tap to touch)
-exec xinput set-prop 14 287 1
+exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
 # set win-space to toggle between cz and us keyboards
 exec_always "setxkbmap -option grp:win_space_toggle us,cz_qwerty"
