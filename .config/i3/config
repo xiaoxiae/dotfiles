@@ -56,8 +56,7 @@ exec --no-startup-id blueberry-tray
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
 # set win-space to toggle between cz and us keyboards
-exec_always "setxkbmap -option grp:win_space_toggle us,cz_qwerty"
-exec_always "setxkbmap -option caps:escape"
+exec setxkbmap -option grp:switch -layout "us,cz" -variant "basic,ucw" -option caps:escape
 
 # launch programs using alt + ...
 bindsym Mod1+x exec --no-startup-id xournalpp
