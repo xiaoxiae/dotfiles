@@ -63,6 +63,16 @@ set visualbell
 set t_vb=
 
 
+" === SPELLCHECK === "
+" add czech and english spellchecking commands
+command Spc  :set spell spelllang=cz
+command Spe  :set spell spelllang=en_us
+command Nosp :set nospell
+
+" underline incorrect words (since BadWolf doesn't for some reason)
+hi SpellBad cterm=underline
+
+
 " === PlUGINS === "
 " vimwiki plugin settings
 filetype plugin on
