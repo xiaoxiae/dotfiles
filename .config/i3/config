@@ -42,23 +42,25 @@ new_window pixel 4
 exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
 
 
-### PROGRAM, SCRIPT STARTUP AND OTHER CONFIGS ###
-# start compton, battery notification script and touchegg
+### PROGRAM STARTUP ###
 exec --no-startup-id compton
 exec --no-startup-id touchegg
-exec --no-startup-id fish /opt/batteryNotification.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id redshift-gtk
 exec --no-startup-id blueberry-tray
 
+
+### KEYBOARD SETTINGS ###
 # change touchpad settings (for tap to touch)
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
 # set win-space to toggle between cz and us keyboards
-exec setxkbmap -option grp:switch -layout "us,cz" -variant "basic,ucw" -option caps:escape
+exec_always setxkbmap -option grp:switch -layout "us,cz" -variant "basic,ucw" -option caps:escape
 
-# launch programs using alt + ...
+
+### PROGRAM LAUNCHING ###
+# launch programs using Mod1 + ...
 bindsym Mod1+x exec --no-startup-id xournalpp
 bindsym Mod1+f exec --no-startup-id firefox
 bindsym Mod1+a exec --no-startup-id atom
@@ -76,12 +78,6 @@ bindsym $mod+Return exec mate-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# change focused window
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -102,11 +98,6 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
@@ -150,27 +141,14 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# resize window (you can also use the mouse for that)
+# resize window 
 mode "resize" {
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym h resize shrink width 4 px or 4 ppt
         bindsym j resize grow height 4 px or 4 ppt
         bindsym k resize shrink height 4 px or 4 ppt
         bindsym l resize grow width 4 px or 4 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 4 px or 4 ppt
-        bindsym Down resize grow height 4 px or 4 ppt
-        bindsym Up resize shrink height 4 px or 4 ppt
-        bindsym Right resize grow width 4 px or 4 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -178,6 +156,6 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-	font pango:DejaVu Sans Mono, Awesome 12
+    status_command i3status
+	font pango:DejaVu Sans Mono, Awesome 13
 }
