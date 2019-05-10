@@ -1,0 +1,15 @@
+[submodule "~/.vim/pack/plugins/start/vim-airline"]
+	path = ~/.vim/pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "~/.vim/pack/plugins/start/vim-surround"]
+	path = ~/.vim/pack/plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "~/.vim/pack/plugins/start/vimwiki"]
+	path = ~/.vim/pack/plugins/start/vimwiki
+	url = https://github.com/vimwiki/vimwiki
+[submodule "~/.vim/pack/plugins/start/ultisnips"]
+	path = ~/.vim/pack/plugins/start/ultisnips
+	url = https://github.com/sirver/UltiSnips
+[submodule "~/.vim/pack/plugins/start/vim-multiple-cursors"]
+	path = ~/.vim/pack/plugins/start/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors
