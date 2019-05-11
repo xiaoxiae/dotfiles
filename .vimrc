@@ -17,7 +17,6 @@ set timeoutlen=1000 ttimeoutlen=0  " no delay after exiting visual mode
 
 " === TABS === "
 set tabstop=4  " 4 spaces as a tab
-set expandtab  " make tabs spaces
 
 set shiftwidth=4            " 4 inserted spaces when indenting
 set smartindent autoindent  " smarter, automatic indenting
@@ -110,6 +109,9 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" split into tabs
+let g:UltiSnipsEditSplit="tabdo"
 
 " airline plugin
 let g:airline_powerline_fonts=1
