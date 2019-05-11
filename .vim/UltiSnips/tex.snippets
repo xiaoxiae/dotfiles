@@ -1,0 +1,22 @@
+snippet b "begin{} ... end{}"
+\begin{${1:section}}
+	${VISUAL}$0
+\end{$1}
+endsnippet
+
+snippet head "Default document head."
+\documentclass[a4paper]{article}
+
+\begin{document}
+	$0
+\end{document}
+endsnippet
+
+snippet em "Emphasis"
+\emph{${VISUAL}}
+endsnippet
+
+snippet date "Current date."
+`!p from datetime import datetime
+snip.rv = datetime.now().strftime('%d/%m/%Y')`
+endsnippet
