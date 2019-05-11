@@ -49,6 +49,15 @@ nmap <leader>O O<Esc>
 nmap <leader>o O<Esc>
 
 
+" === TAB BINDINGS === "
+" open new tab
+nnoremap <C-t> :tabnew<CR>
+
+" bind ctrl + move buttons to move tabs
+nnoremap H gT
+nnoremap L gt
+
+
 " === RUNNING FILES === "
 command Rpy :w | !py %<cr>
 
