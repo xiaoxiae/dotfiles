@@ -62,6 +62,14 @@ nnoremap L gt
 command Rpy :w | !py %<cr>
 
 
+" === FILETYPE-SPECIFIC BEHAVIOR === "
+" decrease indentation in Tex documents
+autocmd FileType tex setlocal tabstop=2 shiftwidth=2
+
+" ulify tex flavors, since I really only work with LaTeX
+let g:tex_flavor = "latex"
+
+
 " === TEMPORARY === "
 " disable up/down/left/right keys for better habbits
 noremap <Up> <NOP>
