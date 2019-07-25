@@ -57,6 +57,9 @@ nnoremap <C-L> <C-W><C-L>
 " more natural splitting
 set splitbelow splitright
 
+" automatic split resize
+autocmd VimResized * wincmd =
+
 
 " === BUFFER BINDINGS === "
 " bind ctrl + move buttons to move tabs
