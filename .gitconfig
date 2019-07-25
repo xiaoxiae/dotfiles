@@ -1,3 +1,12 @@
 [user]
 	email = tomas.slama.131@gmail.com
 	name = xiaoxiae
+
+[alias]
+	tree = log --decorate --all --graph
+
+[log]
+	date = relative
+
+[format]
+	pretty = format:%C(yellow)%h%C(reset) | %C(cyan)%>(14)%ad%C(reset) | %C(green)%<(8,trunc)%aN%C(reset) |%C(red)%d%C(reset) %s
