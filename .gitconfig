@@ -3,7 +3,18 @@
 	name = xiaoxiae
 
 [alias]
-	tree = log --decorate --all --graph
+	# diff commands
+	d = diff
+	db = diff -b
+
+	# status commands
+	s = status
+	t = log --decorate --all --graph
+	
+	# The Holy Trinity
+	a = add
+	c = commit -m
+	p = push -u origin master
 
 [log]
 	date = relative
