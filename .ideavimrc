@@ -1,1 +1,4 @@
 source ~/.vimrc
+
+set surround
+set multiple-cursors
