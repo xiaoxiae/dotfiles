@@ -14,7 +14,11 @@
 	# The Holy Trinity
 	a = add
 	c = commit -m
+	ca = commit --amend -m
 	p = push -u origin master
+
+	# undo commit
+	undo = reset HEAD~
 
 [log]
 	date = relative
