@@ -34,6 +34,8 @@ set wildmenu  " show command suggestions
 
 set undofile  " persistent undo
 
+set scrolloff=4  " always have min. 4 lines above/below
+
 
 " === SEARCH === "
 set incsearch hlsearch    " search (and highlight) as we type
