@@ -34,7 +34,7 @@ FILE_EXTENSION="${FILE_PATH##*.}"
 FILE_EXTENSION_LOWER=$(echo ${FILE_EXTENSION} | tr '[:upper:]' '[:lower:]')
 
 # Settings
-HIGHLIGHT_SIZE_MAX=262143  # 256KiB
+HIGHLIGHT_SIZE_MAX=2097152  # 2MiB
 HIGHLIGHT_TABWIDTH=8
 HIGHLIGHT_STYLE='pablo'
 PYGMENTIZE_STYLE='autumn'
@@ -90,9 +90,9 @@ handle_image() {
     local mimetype="${1}"
     case "${mimetype}" in
         # SVG
-        # image/svg+xml)
-        #     convert "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
-        #     exit 1;;
+        image/svg+xml)
+            convert "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
+            exit 1;;
 
         # Image
         image/*)
@@ -110,10 +110,11 @@ handle_image() {
             exit 7;;
 
         # Video
-        # video/*)
-        #     # Thumbnail
-        #     ffmpegthumbnailer -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" -s 0 && exit 6
-        #     exit 1;;
+        video/*)
+            # Thumbnail
+            ffmpegthumbnailer -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" -s 0 && exit 6
+            exit 1;;
+
         # PDF
         # application/pdf)
         #     pdftoppm -f 1 -l 1 \
