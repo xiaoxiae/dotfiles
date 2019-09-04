@@ -14,7 +14,7 @@ set nu          " line numbering
 set lazyredraw  " don't redraw when it it's necessary 
 set timeoutlen=1000 ttimeoutlen=0  " no delay after exiting visual mode
 
-set colorcolumn=88  " ruler
+set colorcolumn=88  " ruler (inspired by Python's Black)
 
 
 " === TABS === "
@@ -131,7 +131,7 @@ filetype plugin on
 let g:vimwiki_list = [{'path': '~/Documents/Wiki/', 'diary_rel_path': 'Diary/', 'syntax': 'markdown', 'ext': '.md'}]
 
 let g:vimwiki_table_mappings = 0  "disable tab mappings in insert mode 
-let g:vimwiki_global_ext = 0  " don't use vimwiki format for other md files
+let g:vimwiki_global_ext = 0      " don't use vimwiki format for other md files
 
 " ultisnips plugin settings
 let g:UltiSnipsSnippetsDir=$HOME.'/.vim/UltiSnips/'

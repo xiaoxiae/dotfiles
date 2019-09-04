@@ -63,8 +63,8 @@ bindsym Mod1+g exec --no-startup-id gitkraken  # GitKraken
 bindsym Mod1+v exec --no-startup-id vlc        # VLC
 bindsym Mod1+w exec --no-startup-id mate-terminal -x vim ~/Documents/Wiki/index.md  # Wiki
 bindsym Mod1+i exec --no-startup-id mate-terminal -x vim ~/Documents/Wiki/Diary/diary.md  # Diary
-bindsym Mod1+m exec --no-startup-id mate-terminal -x mutt
-bindsym Mod1+r exec --no-startup-id mate-terminal -x ranger
+bindsym Mod1+m exec --no-startup-id mate-terminal -x mutt    # Mutt
+bindsym Mod1+r exec --no-startup-id mate-terminal -x ranger  # Ranger
 
 
 ### OTHER ###
