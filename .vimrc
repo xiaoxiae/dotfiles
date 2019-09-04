@@ -69,8 +69,19 @@ nnoremap H :bnext<CR>
 nnoremap L :bprevious<CR>
 
 
-" === RUNNING FILES === "
+" === CUSTOM COMMANDS === "
+" run Python commands
 command Rpy :w | !py %<cr>
+
+" insert Xournal++ note
+command Diagram :call InsertXournalppNote()
+function! InsertXournalppNote()
+  :let l:file_name = strftime('%y-%d-%m_%H-%M-%S.xopp')
+  :silent exec "!cp /opt/blank_xournalpp_file.xopp " . l:file_name . " &" | redraw!
+  :silent exec "!xournalpp " . l:file_name . " &" | redraw!
+  :exec ":normal i" . "[](" . l:file_name . ")"
+  :normal F[
+endfunction
 
 
 " === FILETYPE-SPECIFIC BEHAVIOR === "
