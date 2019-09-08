@@ -65,6 +65,7 @@ bindsym Mod1+w exec --no-startup-id mate-terminal -x vim ~/Documents/Wiki/index.
 bindsym Mod1+i exec --no-startup-id mate-terminal -x vim ~/Documents/Wiki/Diary/diary.md  # Diary
 bindsym Mod1+m exec --no-startup-id mate-terminal -x mutt    # Mutt
 bindsym Mod1+r exec --no-startup-id mate-terminal -x ranger  # Ranger
+bindsym Mod1+p exec --no-startup-id mate-terminal -x mpv --shuffle --no-video Music/  # Music (with MPV)
 
 
 ### OTHER ###
