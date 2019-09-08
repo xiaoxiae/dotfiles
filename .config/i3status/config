@@ -1,14 +1,8 @@
 # i3status configuration file.
-# see "man i3status" for documentation.
-
-# It is important that this file is edited as UTF-8.
-# The following line should contain a sharp s:
-# ß
-# If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        interval = 1
+	colors = true
+	interval = 1
 }
 
 order += "battery all"
@@ -16,39 +10,54 @@ order += "volume master"
 order += "disk /"
 order += "wireless _first_"
 order += "ethernet _first_"
+order += "memory"
 order += "load"
 order += "tztime local"
 
-wireless _first_ {
-        format_up = " %essid (%ip)"
-        format_down = ""
-}
-
 battery all {
-        format = "%status %percentage %remaining"
+	format = "%status %percentage"
+
 	status_bat = ""
 	status_chr = ""
 	status_unk = ""
+    status_full = ""
+
 	low_threshold = 15
-}
-
-tztime local {
-        format = " %d.%m.%Y (%H:%M:%S)"
-}
-
-load {
-        format = " %1min"
-}
-
-disk "/" {
-        prefix_type = decimal
-	format = " %free"
+    threshold_type = percentage
 }
 
 volume master {
-        format = " %volume"
-        format_muted = " %volume"
-        device = "default"
-        mixer = "Master"
-        mixer_idx = 0
+	format = " %volume"
+	format_muted = " %volume"
+
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+}
+
+disk "/" {
+	format = " %free"
+	prefix_type = decimal
+}
+
+wireless _first_ {
+	format_up = " %essid (%ip)"
+	format_down = ""
+}
+
+ethernet _first_ {
+	format_up = " %essid (%ip)"
+	format_down = ""
+}
+
+memory {
+	format = " %used"
+}
+
+load {
+	format = " %1min"
+}
+
+tztime local {
+	format = " %-d.%-m.%Y %H:%M:%S"
 }
