@@ -86,11 +86,12 @@ endfunction
 
 " === FILETYPE-SPECIFIC BEHAVIOR === "
 " decrease indentation in Tex documents
-autocmd FileType tex setlocal tabstop=2 shiftwidth=2
+autocmd FileType tex  setlocal tabstop=2 shiftwidth=2
+autocmd FileType html setlocal tabstop=2 shiftwidth=2
 
-" reformat Python files after saving using Black
+" Python spell check and auto format
+autocmd FileType python  execute ':Spe'
 autocmd BufWritePre *.py execute ':Black'
-autocmd FileType py Spe
 
 
 " unify tex flavors, since I really only work with LaTeX
