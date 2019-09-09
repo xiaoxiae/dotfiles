@@ -92,12 +92,13 @@ autocmd FileType tex setlocal tabstop=2 shiftwidth=2
 autocmd BufWritePre *.py execute ':Black'
 autocmd FileType py Spe
 
-" ulify tex flavors, since I really only work with LaTeX
+
+" unify tex flavors, since I really only work with LaTeX
 let g:tex_flavor = "latex"
 
 
 " === TEMPORARY === "
-" disable up/down/left/right keys for better habbits
+" disable up/down/left/right keys for better habits
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -125,7 +126,7 @@ hi SpellBad ctermfg=red
 hi SpellBad cterm=underline
 
 
-" === PlUGINS === "
+" === PLUGINS === "
 " vimwiki plugin settings
 let g:vimwiki_list = [{'path': '~/Documents/Wiki/', 'diary_rel_path': 'Diary/', 'syntax': 'markdown', 'ext': '.md'}]
 
