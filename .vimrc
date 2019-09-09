@@ -20,8 +20,8 @@ set colorcolumn=88  " ruler (inspired by Python's Black)
 " === TABS === "
 set tabstop=4  " 4 spaces as a tab
 
-set shiftwidth=4            " 4 inserted spaces when indenting
-set smartindent autoindent  " smarter, automatic indenting
+set shiftwidth=4           " 4 inserted spaces when indenting
+filetype plugin indent on  " indenting
 
 
 " === OTHER === "
@@ -127,7 +127,6 @@ hi SpellBad cterm=underline
 
 " === PlUGINS === "
 " vimwiki plugin settings
-filetype plugin on
 let g:vimwiki_list = [{'path': '~/Documents/Wiki/', 'diary_rel_path': 'Diary/', 'syntax': 'markdown', 'ext': '.md'}]
 
 let g:vimwiki_table_mappings = 0  "disable tab mappings in insert mode 
