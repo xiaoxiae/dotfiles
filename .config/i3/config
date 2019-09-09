@@ -1,3 +1,5 @@
+# i3 configuration file
+
 # set windows key as mod
 set $mod Mod4
 
@@ -14,7 +16,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # rofi run and drun
 bindsym $mod+p exec rofi -show drun -show-icons -theme Monokai by milouse
-bindsym $mod+d exec rofi -show run -theme Monokai by milouse
 
 # printscreen
 bindsym $mod+Print exec mate-screenshot
@@ -24,6 +25,7 @@ bindsym $mod+Print exec mate-screenshot
 # restart i3
 bindsym $mod+Shift+r restart
 
+# computer control
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Logout?' -b 'Yes' 'i3-msg exit'"
 bindsym $mod+Shift+o exec "i3-nagbar -t warning -m 'Poweroff?' -b 'Yes' 'poweroff'"
 bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'Reboot?' -b 'Yes' 'reboot'"
@@ -32,7 +34,7 @@ exec xss-lock -- betterlockscreen --lock
 
 ### VISUALS ###
 # set thickness of the i3 window bar
-new_window pixel 4
+new_window 1pixel
 
 # set background to a random picture
 exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
@@ -45,10 +47,11 @@ exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id redshift-gtk
 exec --no-startup-id blueberry-tray
+exec --no-startup-id /opt/Telegram/Telegram
 
 
 ### KEYBOARD SETTINGS ###
-# change touchpad settings (for tap to touch)
+# tap to touch
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
 # set win-space to toggle between cz and us keyboards
@@ -68,9 +71,19 @@ bindsym Mod1+r exec --no-startup-id mate-terminal -x ranger  # Ranger
 bindsym Mod1+p exec --no-startup-id mate-terminal -x mpv --shuffle --no-video Music/  # Music (with MPV)
 
 
+### PROGRAM-SPECIFIC SETTINGS ###
+for_window [class="(?i)xournalpp"] fullscreen enable
+
+
 ### OTHER ###
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# don't wrap focus around
+focus_wrapping no
+
+# don't wrap focus around
+focus_follows_mouse no
 
 # start a terminal
 bindsym $mod+Return exec mate-terminal
@@ -78,6 +91,7 @@ bindsym $mod+Return exec mate-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# move focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -89,20 +103,15 @@ bindsym $mod+Shift+J move down
 bindsym $mod+Shift+K move up
 bindsym $mod+Shift+L move right
 
-# split in horizontal orientation
+# split settings 
 bindsym $mod+t split h
-
-# split in vertical orientation
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
+# fullscreen the focused window
 bindsym $mod+f fullscreen toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
 
 # desktop names
 set $ws1 "1"
@@ -142,17 +151,18 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # resize window 
 mode "resize" {
-        bindsym h resize shrink width 4 px or 4 ppt
-        bindsym j resize grow height 4 px or 4 ppt
-        bindsym k resize shrink height 4 px or 4 ppt
-        bindsym l resize grow width 4 px or 4 ppt
-
-        bindsym Escape mode "default"
+	bindsym h resize shrink width 4 px or 4 ppt
+	bindsym j resize grow height 4 px or 4 ppt
+	bindsym k resize shrink height 4 px or 4 ppt
+	bindsym l resize grow width 4 px or 4 ppt
+	
+	bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
-# start i3 bar
+
+### STATUS BAR ###
 bar {
     status_command i3status
 	separator_symbol "|"
