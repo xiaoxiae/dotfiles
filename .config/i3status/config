@@ -1,10 +1,13 @@
-# i3status configuration file.
+# i3status configuration file
 
+### GENERAL ###
 general {
 	colors = true
 	interval = 1
 }
 
+
+### ORDER ###
 order += "battery all"
 order += "volume master"
 order += "disk /"
@@ -14,6 +17,8 @@ order += "memory"
 order += "load"
 order += "tztime local"
 
+
+### SETTINGS ###
 battery all {
 	format = "%status %percentage"
 
