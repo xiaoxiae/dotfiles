@@ -34,7 +34,7 @@ exec xss-lock -- betterlockscreen --lock
 
 ### VISUALS ###
 # set thickness of the i3 window bar
-new_window 1pixel
+default_border pixel 3
 
 # set background to a random picture
 exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
