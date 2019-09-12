@@ -1,0 +1,22 @@
+# feh config file
+
+# image movement
+scroll_right C-h
+scroll_down  C-j
+scroll_up    C-k
+scroll_left  C-l
+
+# image control
+zoom_in  C-plus
+zoom_out C-minus
+zoom_fit C-equal
+flip     underscore
+mirror   bar
+
+# playlist
+next_img S-less
+prev_img S-greater
+
+# other
+close             q
+toggle_fullscreen f
