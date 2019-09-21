@@ -20,7 +20,7 @@ order += "tztime local"
 
 ### SETTINGS ###
 battery all {
-	format = "%status %percentage"
+	format = "%status %percentage (%remaining)"
 
 	status_bat = ""
 	status_chr = ""
@@ -47,12 +47,12 @@ disk "/" {
 
 wireless _first_ {
 	format_up = " %essid (%ip)"
-	format_down = ""
+	format_down = ""
 }
 
 ethernet _first_ {
 	format_up = " %essid (%ip)"
-	format_down = ""
+	format_down = ""
 }
 
 memory {
