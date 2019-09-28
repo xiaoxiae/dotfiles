@@ -34,6 +34,8 @@ set wildmenu  " show command suggestions
 
 set undofile  " persistent undo
 
+set hidden    " allow hidden buffers
+
 set scrolloff=4  " always have min. 4 lines above/below
 
 
