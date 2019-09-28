@@ -1,0 +1,81 @@
+[global]
+    ### Display ###
+    # display notification on keyboard-focused monitor
+    follow = mouse
+
+    # show how many messages are currently hidden
+    indicate_hidden = yes
+
+    # text/separator padding + horizontal padding
+    padding = 8
+    horizontal_padding = 8
+
+    # defines width in pixels of frame around the notification window.
+    # Set to 0 to disable.
+    frame_width = 3
+
+    # frame and separator color definitions
+    frame_color = "#000000"
+    separator_color = frame
+
+    # sort messages by urgency
+    sort = yes
+
+    # don't remove messages, if the user is idle (no mouse or keyboard input)
+    idle_threshold = 120
+
+
+    ### Text ###
+    font = Monospace 11
+    alignment = center
+    word_wrap = yes
+
+    markup = full
+    format = "<b>%s</b> – %b"
+
+    # ignore newlines '\n' in notifications.
+    ignore_newline = no
+
+    # handle duplicates
+    stack_duplicates = true
+    hide_duplicate_count = true
+
+    # display indicators for URLs (U) and actions (A).
+    show_indicators = yes
+
+    ### Icons ###
+    icon_position = right
+    max_icon_size = 32
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+
+    ### Misc/Advanced ###
+    browser = /usr/bin/firefox -new-tab
+    always_run_script = true
+
+	# dunst window options
+    title = Dunst
+    class = Dunst
+
+    # print a notification on startup.
+    startup_notification = false
+
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+    history = ctrl+grave  # grave = ~
+
+[urgency_low]
+    background = "#222222"
+    foreground = "#888888"
+    timeout = 10
+
+[urgency_normal]
+    background = "#285577"
+    foreground = "#ffffff"
+    timeout = 10
+
+[urgency_critical]
+    background = "#900000"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
+    timeout = 0

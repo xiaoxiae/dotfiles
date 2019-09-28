@@ -42,6 +42,7 @@ exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
 
 ### PROGRAM STARTUP ###
 exec --no-startup-id compton
+exec --no-startup-id dunst
 exec --no-startup-id touchegg
 exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
