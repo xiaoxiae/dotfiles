@@ -43,6 +43,8 @@ set scrolloff=4  " always have min. 4 lines above/below
 set incsearch hlsearch    " search (and highlight) as we type
 set ignorecase smartcase  " ignore search case, unless we type a capital
 
+set path+=**  " search in subdirectories
+
 " hide search results with leader + space
 nnoremap <leader><space> :nohlsearch<CR>
 
