@@ -18,10 +18,8 @@ set colorcolumn=88  " ruler (inspired by Python's Black)
 
 
 " === TABS === "
-set tabstop=4  " tab is 4 characters wide
-
-set shiftwidth=4           " 4 inserted spaces when indenting
-filetype plugin indent on  " indenting
+set tabstop=4 shiftwidth=4  " tab is 4 characters wide
+set autoindent smartindent  " smart indenting
 
 
 " === OTHER === "
