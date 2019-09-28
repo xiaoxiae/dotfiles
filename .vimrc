@@ -1,7 +1,7 @@
-set nocompatible  " settings for vim, not vi!
+set nocompatible  " settings for Vim, not Vi!
 
 set encoding=utf-8  " set encoding to UTF-8
-let mapleader=","   " change leader to ,
+let mapleader=","   " change leader to , (easier to reach)
 
 
 " === VISUALS === "
@@ -18,7 +18,7 @@ set colorcolumn=88  " ruler (inspired by Python's Black)
 
 
 " === TABS === "
-set tabstop=4  " 4 spaces as a tab
+set tabstop=4  " tab is 4 characters wide
 
 set shiftwidth=4           " 4 inserted spaces when indenting
 filetype plugin indent on  " indenting
@@ -64,7 +64,7 @@ autocmd VimResized * wincmd =
 
 
 " === BUFFER BINDINGS === "
-" bind ctrl + move buttons to move tabs
+" bind shift + h/l buttons to move between buffers
 nnoremap H :bnext<CR>
 nnoremap L :bprevious<CR>
 
@@ -122,19 +122,19 @@ command Spc :set spell spelllang=cz
 command Spe :set spell spelllang=en_us
 command Spn :set nospell
 
-" highlight incorrect words (since BadWolf doesn't)
+" highlight incorrectly spelled words
 hi SpellBad ctermfg=red
 hi SpellBad cterm=underline
 
 
 " === PLUGINS === "
-" vimwiki plugin settings
+" vimwiki
 let g:vimwiki_list = [{'path': '~/Documents/Wiki/', 'diary_rel_path': 'Diary/', 'syntax': 'markdown', 'ext': '.md'}]
 
 let g:vimwiki_table_mappings = 0  "disable tab mappings in insert mode 
 let g:vimwiki_global_ext = 0      " don't use vimwiki format for other md files
 
-" ultisnips plugin settings
+" ultisnips
 let g:UltiSnipsSnippetsDir=$HOME.'/.vim/UltiSnips/'
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
@@ -143,5 +143,5 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:UltiSnipsEditSplit="tabdo"  " split into tabs
 
-" airline plugin
+" airline
 let g:airline_powerline_fonts=1
