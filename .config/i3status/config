@@ -21,7 +21,7 @@ order += "tztime local"
 
 ### SETTINGS ###
 battery all {
-	format = "%status %percentage (%remaining)"
+	format = "%status %percentage %remaining"
 
 	status_bat = ""
 	status_chr = ""
