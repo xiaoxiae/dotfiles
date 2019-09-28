@@ -113,8 +113,6 @@ noremap <Right> <NOP>
 " === MISCELLANEOUS === "
 set history=1000  " more history!
 
-set autochdir " automatically change dir to current file
-
 " disable bells
 set visualbell
 set t_vb=
