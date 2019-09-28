@@ -10,6 +10,7 @@ general {
 ### ORDER ###
 order += "battery all"
 order += "volume master"
+order += "read_file brightness"
 order += "disk /"
 order += "wireless _first_"
 order += "ethernet _first_"
@@ -29,6 +30,13 @@ battery all {
 
 	low_threshold = 15
     threshold_type = percentage
+}
+
+read_file brightness {
+	path = "/sys/class/backlight/intel_backlight/brightness"
+	format = " %content" 
+
+	color_good = '#ffffff'  
 }
 
 volume master {
