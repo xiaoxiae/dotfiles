@@ -29,7 +29,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Logout?' -b 'Yes' 'i3-msg exit'"
 bindsym $mod+Shift+o exec "i3-nagbar -t warning -m 'Poweroff?' -b 'Yes' 'poweroff'"
 bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'Reboot?' -b 'Yes' 'reboot'"
-exec xss-lock -- betterlockscreen --lock
+exec xss-lock -- i3lock --blur=1 -e --indicator
 
 
 ### VISUALS ###
