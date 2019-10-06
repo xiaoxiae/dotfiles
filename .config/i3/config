@@ -56,8 +56,8 @@ exec --no-startup-id /opt/Telegram/Telegram
 # tap to touch
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
-# set win-space to toggle between cz and us keyboards
-exec_always setxkbmap -option grp:switch -layout "us,cz" -variant "basic,ucw" -option caps:escape
+# use the ucw keyboard (on R-Alt) and swap esc with caps
+exec_always setxkbmap -layout "us,cz" -variant ",ucw" -option caps:swapescape -option grp:switch
 
 
 ### PROGRAM LAUNCHING ###
