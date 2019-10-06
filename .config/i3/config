@@ -73,10 +73,6 @@ bindsym Mod1+r exec --no-startup-id mate-terminal -x ranger  # Ranger
 bindsym Mod1+p exec --no-startup-id mate-terminal -x mpv --shuffle --no-video Music/  # Music (with MPV)
 
 
-### PROGRAM-SPECIFIC SETTINGS ###
-for_window [class="(?i)xournalpp"] fullscreen enable
-
-
 ### OTHER ###
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
