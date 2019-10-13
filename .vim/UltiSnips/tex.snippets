@@ -4,19 +4,33 @@ snippet b "begin{} ... end{}"
 \end{$1}
 endsnippet
 
-snippet head "Default document head."
-\documentclass[a4paper]{article}
-
-\begin{document}
-	$0
-\end{document}
+snippet i "Item"
+\item
 endsnippet
 
 snippet em "Emphasis"
-\emph{${VISUAL}}
+\emph{$1}$0
 endsnippet
 
-snippet date "Current date."
-`!p from datetime import datetime
-snip.rv = datetime.now().strftime('%d/%m/%Y')`
+snippet em "Typewriter"
+\texttt{$1}$0
+endsnippet
+
+snippet m "Inline math"
+\($1\)$0
+endsnippet
+
+snippet # "section"
+\section{${1:name}}
+	${VISUAL}$0
+endsnippet
+
+snippet ## "subsection"
+\subsection{${1:name}}
+	${VISUAL}$0
+endsnippet
+
+snippet ### "subsubsection"
+\subsubsection{${1:name}}
+	${VISUAL}$0
 endsnippet

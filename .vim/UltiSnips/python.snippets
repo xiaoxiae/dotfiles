@@ -12,10 +12,6 @@ for ${1:i} in range($2):
 	${VISUAL}$0
 endsnippet
 
-snippet l "`len()` function call."
-len(${1:${VISUAL:statement}})$0
-endsnippet
-
 snippet wf "Write to a file."
 with open("${1:file.txt}", "w") as ${2:file}:
 	${VISUAL}$0
@@ -31,6 +27,11 @@ def ${1:function}($2):
 	${VISUAL}$0
 endsnippet
 
+snippet fs "A class function."
+def ${1:function}(self$2):
+	${VISUAL}$0
+endsnippet
+
 snippet " "Documentation String."
 """$1"""$0
 endsnippet
@@ -42,5 +43,15 @@ endsnippet
 
 snippet if "If statement."
 if ${1:condition}:
+	${VISUAL}$0
+endsnippet
+
+snippet _i "An __init__ method." b
+def __init__(self$1):
+	${VISUAL}$0
+endsnippet
+
+snippet c "Class" b
+class ${1:Name}:
 	${VISUAL}$0
 endsnippet
