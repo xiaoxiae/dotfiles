@@ -74,8 +74,11 @@ nnoremap L :bprevious<CR>
 
 
 " === CUSTOM COMMANDS === "
-" run Python commands
+" run Python files
 command Rpy :w | !py %<cr>
+
+" run C files
+command Rc :w | !gcc % -o %:r && ./%:r<cr>
 
 " insert Xournal++ note
 command Diagram :call InsertXournalppNote()
