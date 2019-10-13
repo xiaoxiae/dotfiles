@@ -22,6 +22,7 @@ set colorcolumn=88  " ruler (inspired by Python's Black)
 " === TABS === "
 set tabstop=4 shiftwidth=4  " tab is 4 characters wide
 set autoindent smartindent  " smart indenting
+filetype plugin indent on   " indenting
 
 
 " === OTHER === "
@@ -96,10 +97,13 @@ endfunction
 autocmd FileType tex  setlocal tabstop=2 shiftwidth=2
 autocmd FileType html setlocal tabstop=2 shiftwidth=2
 
+" markdown indentation and filetype
+autocmd FileType markdown setlocal ft=vimwiki
+autocmd FileType vimwiki  setlocal wrap
+
 " Python spell check and auto format
 autocmd FileType python  execute ':Spe'
 autocmd BufWritePre *.py execute ':Black'
-
 
 " unify tex flavors, since I really only work with LaTeX
 let g:tex_flavor = "latex"
