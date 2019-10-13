@@ -11,6 +11,8 @@ syntax on     " syntax highlighting
 set cursorline  " highlight the current line
 set nu          " line numbering
 
+set signcolumn=number  " merge sign column and line numbers
+
 set lazyredraw  " don't redraw when it it's necessary 
 set timeoutlen=1000 ttimeoutlen=0  " no delay after exiting visual mode
 
@@ -145,3 +147,7 @@ let g:UltiSnipsEditSplit="tabdo"  " split into tabs
 
 " airline
 let g:airline_powerline_fonts=1
+let g:airline#extensions#ale#enabled = 1
+
+"list ALE
+let g:ale_lint_on_text_changed = 'never'
