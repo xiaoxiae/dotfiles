@@ -10,18 +10,31 @@
 	# status commands
 	s = status
 	t = log --decorate --all --graph
+	b = branch
 	
 	# The Holy Trinity
 	a = add
-	c = commit -m
-	ca = commit --amend -m
-	p = push -u origin master
+	c = commit
+	ca = commit --amend --no-edit
+	p = push
 
-	# undo commit
+	# undo commit (move head)
 	undo = reset HEAD~
+
+	#  other
+	co = checkout
+	cp = cherry-pick
+	m = merge
+
+	# stash
+	st = stash
 
 [log]
 	date = relative
 
 [format]
 	pretty = format:%C(yellow)%h%C(reset) | %C(cyan)%>(14)%ad%C(reset) | %C(green)%<(8,trunc)%aN%C(reset) |%C(red)%d%C(reset) %s
+
+[core]
+	# unicode symbol format
+	quotePath = false
