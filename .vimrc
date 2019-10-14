@@ -85,9 +85,10 @@ command Rc :w | !gcc % -o %:r && ./%:r<cr>
 command Diagram :call InsertXournalppNote()
 function! InsertXournalppNote()
   :let l:file_name = strftime('%y-%d-%m_%H-%M-%S.xopp')
-  :silent exec "!cp /opt/blank_xournalpp_file.xopp " . l:file_name . " &" | redraw!
-  :silent exec "!xournalpp " . l:file_name . " &" | redraw!
-  :exec ":normal i" . "[](" . l:file_name . ")"
+  :silent exec "!mkdir -p diagrams/"
+  :silent exec "!cp /opt/blank_xournalpp_file.xopp diagrams/" . l:file_name
+  :silent exec "!xournalpp diagrams/" . l:file_name . " &" | redraw!
+  :exec ":normal i" . "[](diagrams/" . l:file_name . ")"
   :normal F[
 endfunction
 
@@ -111,9 +112,9 @@ let g:tex_flavor = "latex"
 
 " === TEMPORARY === "
 " disable up/down/left/right keys for better habits
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
+noremap <Up>    <NOP>
+noremap <Down>  <NOP>
+noremap <Left>  <NOP>
 noremap <Right> <NOP>
 
 
