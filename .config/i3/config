@@ -20,6 +20,7 @@ bindsym $mod+d exec rofi -show run -theme Monokai
 
 # printscreen
 bindsym $mod+Print exec mate-screenshot -a
+bindsym $modShift+Print exec mate-screenshot
 
 
 ### COMPUTER STATE CONTROL ###
@@ -156,6 +157,11 @@ mode "resize" {
 	bindsym j resize grow height 4 px or 4 ppt
 	bindsym k resize shrink height 4 px or 4 ppt
 	bindsym l resize grow width 4 px or 4 ppt
+
+	bindsym Shift+h resize shrink width 10 px or 10 ppt
+	bindsym Shift+j resize grow height 10 px or 10 ppt
+	bindsym Shift+k resize shrink height 10 px or 10 ppt
+	bindsym Shift+l resize grow width 10 px or 10 ppt
 	
 	bindsym Escape mode "default"
 }
@@ -167,5 +173,5 @@ bindsym $mod+r mode "resize"
 bar {
     status_command i3status
 	separator_symbol "|"
-	font pango:DejaVu Sans Mono, Awesome 12
+	font pango:DejaVu Sans Mono, Awesome 10
 }
