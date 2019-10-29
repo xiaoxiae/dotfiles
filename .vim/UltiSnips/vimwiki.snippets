@@ -3,7 +3,7 @@ snippet l "link"
 [${VISUAL}]($1)$0
 endsnippet
 
-snippet b "bold"
+snippet bf "bold"
 **${1:${VISUAL}}**$0
 endsnippet
 
@@ -23,10 +23,6 @@ snippet sq "single czech quotes"
 ‚${1:${VISUAL}}‘$0
 endsnippet
 
-snippet s "strikethrough"
-~~${1:${VISUAL}}~~$0
-endsnippet
-
 snippet d "definition" b
 $1
 :	${2:${VISUAL}}
@@ -42,10 +38,16 @@ endsnippet
 # LATEX
 
 ## MATH
-snippet M "display math" w
+snippet MA "display math" w
 \begin{align*}
 	${1:${VISUAL}}
 \end{align*}$0
+endsnippet
+
+snippet MG "display math" w
+\begin{gather*}
+	${1:${VISUAL}}
+\end{gather*}$0
 endsnippet
 
 snippet m "inline math"
@@ -74,25 +76,20 @@ snippet . "dot" w
 \cdot$0
 endsnippet
 
-snippet c. "ldots" w
-\ldots$0
-endsnippet
-
-snippet v. "ldots" w
-\ldots$0
-endsnippet
-
 snippet l. "ldots" w
 \ldots$0
 endsnippet
 
-snippet -> "right arrow" w
-\rightarrow$0
+
+### TEXT MODES
+snippet txt "text" w
+\text{${1:${VISUAL}}}$0
 endsnippet
 
-snippet <- "right arrow" w
-\leftarrow$0
+snippet rm "math rm" w
+\mathrm{${1:${VISUAL}}}$0
 endsnippet
+
 
 ### OVER/UNDERBRACKETS
 snippet _{ "underbrace" w
@@ -129,16 +126,16 @@ snippet || "abs" i
 endsnippet
 
 ### OPERATORS
-snippet sqrt "sqrt" i
-\sqrt\{${1:${VISUAL}}\}$0
-endsnippet
-
 snippet x "times" w
 \times$0
 endsnippet
 
 snippet o "circ" w
 \circ$0
+endsnippet
+
+snippet sqrt "sqrt" i
+\sqrt\{${1:${VISUAL}}\}$0
 endsnippet
 
 snippet root "n-th root" i
@@ -149,15 +146,24 @@ snippet log "logarithm" i
 \log\{$1\}\{${2:${VISUAL}}\}$0
 endsnippet
 
-snippet sum "sum" w
+snippet Sum "sum" w
 \sum_\{$1\}^\{$2\}$0
 endsnippet
 
-snippet prod "product" w
+snippet Prod "product" w
 \prod_\{$1\}^\{$2\}$0
 endsnippet
 
-### BOOLEAN OPERATORS
+snippet Cup "big cup" w
+\bigcup_\{$1\}^\{$2\}$0
+endsnippet
+
+snippet Cap "big cap" w
+\bigcap_\{$1\}^\{$2\}$0
+endsnippet
+
+
+### BOOLEAN AND EQUALITY OPERATORS
 snippet not "logical not" w
 \neg
 endsnippet
@@ -170,44 +176,46 @@ snippet and "logical and" w
 \land
 endsnippet
 
-snippet != "not equal" w
+snippet != "not equal" i
 \neq
 endsnippet
 
-snippet => "implication" w
+snippet => "implication" i
 \implies$0
 endsnippet
 
-snippet <=> "if and only if" w
+snippet -> "maps to" w
+\mapsto$0
+endsnippet
+
+snippet <=> "if and only if" i 
 \iff$0
 endsnippet
 
-snippet === "is equivalent to" w
+snippet === "is equivalent to" i
 \equiv$0
 endsnippet
 
-### EQUALITY SYMBOLS
 snippet .= "dot equality" w
 \doteq$0
 endsnippet
 
-snippet ~ "similarity" w
+snippet ~ "similarity" i
 \sim
 endsnippet
 
-snippet ~~ "approximation" w
+snippet ~~ "approximation" i
 \approx$0
 endsnippet
 
-snippet <= "less than or equal" w
+snippet <= "less than or equal" i
 \le$0
 endsnippet
 
-snippet >= "greater than or equal" w
+snippet >= "greater than or equal" i
 \ge$0
 endsnippet
 
-### OTHER OPERATORS
 snippet | "divides" w
 \mid
 endsnippet
@@ -215,6 +223,7 @@ endsnippet
 snippet !| "does not divide" w
 \not\mid
 endsnippet
+
 
 ### TRIGONOMETRY
 snippet sin "sin" w
@@ -229,7 +238,23 @@ snippet tan "tan" w
 \tan\left(${1:${VISUAL}}\right)$0
 endsnippet
 
-### SETS
+### SET OPERATIONS
+snippet fa "for all" w
+\forall
+endsnippet
+
+snippet ex "exists" w
+\exists
+endsnippet
+
+snippet nex "not exists" w
+\nexists
+endsnippet
+
+snippet ex! "only one exists" w
+\exists!
+endsnippet
+
 snippet uni "union" w
 \cup
 endsnippet
@@ -238,14 +263,16 @@ snippet int "intersection" w
 \cap
 endsnippet
 
-snippet sub "subset" w
-\subset
+snippet c= "subset" w
+\subseteq
 endsnippet
 
-snippet sup "superset" w
-\superset
+snippet \ "set minus" w
+\setminus
 endsnippet
 
+
+### NUMBER SETS
 snippet R "real numbers" w
 \mathbb{R}
 endsnippet
@@ -266,8 +293,10 @@ snippet Q "rational numbers" w
 \mathbb{Q}
 endsnippet
 
+
+### OTHER NOTATION
 snippet O "O notation" w
-\mathcal{R}
+\mathcal{O}
 endsnippet
 
 
