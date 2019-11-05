@@ -162,5 +162,4 @@ let g:ale_lint_on_enter='never'
 let g:ale_lint_on_filetype_changed='never'
 
 " calendar
-let g:calendar_task=1
 let g:calendar_first_day="monday"
