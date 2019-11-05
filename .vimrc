@@ -151,11 +151,16 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-let g:UltiSnipsEditSplit="tabdo"  " split into tabs
-
 " airline
 let g:airline_powerline_fonts=1
-let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#ale#enabled=1
 
-"list ALE
-let g:ale_lint_on_text_changed = 'never'
+" ale
+let g:ale_lint_on_text_changed='never'
+let g:ale_lint_on_insert_leave='never'
+let g:ale_lint_on_enter='never'
+let g:ale_lint_on_filetype_changed='never'
+
+" calendar
+let g:calendar_task=1
+let g:calendar_first_day="monday"
