@@ -55,12 +55,6 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
 
-" split navigation
-nnoremap <C-H> <C-W><C-H>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-
 " more natural splitting
 set splitbelow splitright
 
@@ -74,12 +68,15 @@ nnoremap H :bnext<CR>
 nnoremap L :bprevious<CR>
 
 
-" === CUSTOM COMMANDS === "
-" run Python files
-command Rpy :w | !py %<cr>
+" === TAB NAVIGATION === "
+nnoremap <C-H> gT
+nnoremap <C-L> gt
 
-" run C files
-command Rc :w | !gcc % -o %:r && ./%:r<cr>
+
+" === CUSTOM COMMANDS === "
+map <F2> :w \| !py %<cr>
+command Rc  :w | !gcc % -o %:r && ./%:r<cr>
+command Rcs :w | !mcs % && mono %:r.exe<cr>
 
 " insert Xournal++ note
 command Diagram :call InsertXournalppNote()
