@@ -74,9 +74,10 @@ nnoremap <C-L> gt
 
 
 " === CUSTOM COMMANDS === "
-map <F2> :w \| !py %<cr>
-command Rc  :w | !gcc % -o %:r && ./%:r<cr>
-command Rcs :w | !mcs % && mono %:r.exe<cr>
+autocmd FileType python map <F2> :w \| !py %<cr>
+autocmd FileType c      map <F2> :w \| !gcc % -o %:r && ./%:r<cr>
+autocmd FileType cpp    map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
+autocmd FileType cs     map <F2> :w \| !mcs % && mono %:r.exe<cr>
 
 " insert Xournal++ note
 command Diagram :call InsertXournalppNote()
