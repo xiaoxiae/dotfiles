@@ -39,6 +39,10 @@ set hidden    " allow hidden buffers
 
 set scrolloff=4  " always have min. 4 lines above/below
 
+set autoread  " automatically read files when reloaded outide Vim
+
+set autochdir " automatically change directory to current file
+
 
 " === SEARCH === "
 set incsearch hlsearch    " search (and highlight) as we type
@@ -82,12 +86,12 @@ autocmd FileType cs     map <F2> :w \| !mcs % && mono %:r.exe<cr>
 " insert Xournal++ note
 command Diagram :call InsertXournalppNote()
 function! InsertXournalppNote()
-  :let l:file_name = strftime('%y-%d-%m_%H-%M-%S.xopp')
-  :silent exec "!mkdir -p diagrams/"
-  :silent exec "!cp /opt/blank_xournalpp_file.xopp diagrams/" . l:file_name
-  :silent exec "!xournalpp diagrams/" . l:file_name . " &" | redraw!
-  :exec ":normal i" . "[](diagrams/" . l:file_name . ")"
-  :normal F[
+	:let l:file_name = strftime('%y-%d-%m_%H-%M-%S.xopp')
+	:silent exec "!mkdir -p diagrams/"
+	:silent exec "!cp /opt/blank_xournalpp_file.xopp diagrams/" . l:file_name
+	:silent exec "!xournalpp diagrams/" . l:file_name . " &" | redraw!
+	:exec ":normal i" . "[](diagrams/" . l:file_name . ")"
+	:normal F[
 endfunction
 
 
@@ -134,7 +138,6 @@ command Spn :set nospell
 hi SpellBad ctermfg=red
 hi SpellBad cterm=underline
 
-
 " === PLUGINS === "
 " vimwiki
 let g:vimwiki_list = [{'path': '~/Documents/Wiki/', 'diary_rel_path': 'Diary/', 'syntax': 'markdown', 'ext': '.md'}]
@@ -149,15 +152,8 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-" airline
-let g:airline_powerline_fonts=1
-let g:airline#extensions#ale#enabled=1
-
 " ale
 let g:ale_lint_on_text_changed='never'
 let g:ale_lint_on_insert_leave='never'
 let g:ale_lint_on_enter='never'
 let g:ale_lint_on_filetype_changed='never'
-
-" calendar
-let g:calendar_first_day="monday"

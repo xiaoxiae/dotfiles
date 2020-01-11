@@ -54,6 +54,22 @@ snippet m "inline math"
 \$${1:${VISUAL}}\$$0
 endsnippet
 
+snippet lm "liquid math"
+{% latex %}${1:${VISUAL}}{% endlatex %}$0
+endsnippet
+
+snippet LM "liquid display math"
+{% latex display %}${1:${VISUAL}}{% endlatex %}$0
+endsnippet
+
+snippet jm "mathjax math"
+\(${1:${VISUAL}}\)$0
+endsnippet
+
+snippet JM "mathjax display math"
+\[${1:${VISUAL}}\]$0
+endsnippet
+
 ### COMMANDS
 snippet / "fraction" i
 \frac\{${1:${VISUAL}}\}\{$2\}$0

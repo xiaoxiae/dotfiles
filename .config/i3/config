@@ -28,10 +28,9 @@ bindsym $modShift+Print exec mate-screenshot
 bindsym $mod+Shift+r restart
 
 # computer control
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Logout?' -b 'Yes' 'i3-msg exit'"
-bindsym $mod+Shift+o exec "i3-nagbar -t warning -m 'Poweroff?' -b 'Yes' 'poweroff'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Log out?' -b 'Yes' 'i3-msg exit'"
+bindsym $mod+Shift+o exec "i3-nagbar -t warning -m 'Shut down?' -b 'Yes' 'poweroff'"
 bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'Reboot?' -b 'Yes' 'reboot'"
-exec xss-lock -- i3lock --blur=1 -e --indicator
 
 
 ### VISUALS ###
@@ -45,12 +44,15 @@ exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
 ### PROGRAM STARTUP ###
 exec --no-startup-id compton
 exec --no-startup-id dunst
-exec --no-startup-id touchegg
 exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id redshift-gtk
 exec --no-startup-id blueberry-tray
-exec --no-startup-id /opt/Telegram/Telegram
+exec --no-startup-id telegram-desktop -startintray 
+exec --no-startup-id /opt/protonmail/bridge/protonmail-bridge --no-window
+exec --no-startup-id riot-desktop --hidden
+exec --no-startup-id xss-lock -- i3lock --blur=1 -e --indicator
+exec --no-startup-id fish -c ssh-agent
 
 
 ### KEYBOARD AND TOUCHSCREEN SETTINGS ###
@@ -61,21 +63,19 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 exec xsetwacom --set "Wacom HID 50BF Finger touch" Gesture off
 
 # use the ucw keyboard (on R-Alt) and swap esc with caps
-exec_always setxkbmap -layout "us,cz" -variant ",ucw" -option caps:swapescape -option grp:switch
+exec_always setxkbmap -layout "us,cz" -variant ",ucw" -option caps:swapescape grp:switch
 
 
 ### PROGRAM LAUNCHING ###
-# launch programs using Mod1 + ...
-bindsym Mod1+x exec --no-startup-id xournalpp  # Xournal++
-bindsym Mod1+f exec --no-startup-id firefox    # FireFox
-bindsym Mod1+g exec --no-startup-id gitkraken  # GitKraken
-bindsym Mod1+v exec --no-startup-id vlc        # VLC
-bindsym Mod1+w exec --no-startup-id mate-terminal -x vim ~/Documents/Wiki/index.md  # Wiki
-bindsym Mod1+i exec --no-startup-id mate-terminal -x vim ~/Documents/Wiki/Diary/diary.md  # Diary
-bindsym Mod1+m exec --no-startup-id mate-terminal -x mutt    # Mutt
-bindsym Mod1+r exec --no-startup-id mate-terminal -x ranger  # Ranger
-bindsym Mod1+p exec --no-startup-id mate-terminal -x mpv --shuffle --no-video Music/  # Music (with MPV)
-bindsym Mod1+c exec --no-startup-id mate-terminal -x vim -v +":Calendar" # Calendar
+bindsym Mod1+x exec --no-startup-id xournalpp
+bindsym Mod1+f exec --no-startup-id firefox
+bindsym Mod1+g exec --no-startup-id gitkraken
+bindsym Mod1+v exec --no-startup-id vlc
+bindsym Mod1+w exec --no-startup-id mate-terminal -x vim ~/Documents/Wiki/index.md
+bindsym Mod1+i exec --no-startup-id mate-terminal -x vim ~/Documents/Wiki/Diary/diary.md
+bindsym Mod1+m exec --no-startup-id thunderbird
+bindsym Mod1+r exec --no-startup-id mate-terminal -x ranger
+bindsym Mod1+a exec --no-startup-id anki -b ~/Documents/Anki
 
 
 ### OTHER ###
@@ -128,18 +128,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# more desktops!
-set $ws11 "11"
-set $ws12 "12"
-set $ws13 "13"
-set $ws14 "14"
-set $ws15 "15"
-set $ws16 "16"
-set $ws17 "17"
-set $ws18 "18"
-set $ws19 "19"
-set $ws20 "20"
-
 set $ws_mail "M"
 set $ws_entertainment "E"
 
@@ -155,19 +143,8 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-bindsym $mod+Ctrl+1 workspace $ws11
-bindsym $mod+Ctrl+2 workspace $ws12
-bindsym $mod+Ctrl+3 workspace $ws13
-bindsym $mod+Ctrl+4 workspace $ws14
-bindsym $mod+Ctrl+5 workspace $ws15
-bindsym $mod+Ctrl+6 workspace $ws16
-bindsym $mod+Ctrl+7 workspace $ws17
-bindsym $mod+Ctrl+8 workspace $ws18
-bindsym $mod+Ctrl+9 workspace $ws19
-bindsym $mod+Ctrl+0 workspace $ws20
-
-bindsym $mod+e workspace $ws_mail
-bindsym $mod+m workspace $ws_entertainment
+bindsym $mod+m workspace $ws_mail
+bindsym $mod+e workspace $ws_entertainment
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -180,20 +157,6 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
-
-bindsym $mod+Ctrl+Shift+1 move container to workspace $ws11
-bindsym $mod+Ctrl+Shift+2 move container to workspace $ws12
-bindsym $mod+Ctrl+Shift+3 move container to workspace $ws13
-bindsym $mod+Ctrl+Shift+4 move container to workspace $ws14
-bindsym $mod+Ctrl+Shift+5 move container to workspace $ws15
-bindsym $mod+Ctrl+Shift+6 move container to workspace $ws16
-bindsym $mod+Ctrl+Shift+7 move container to workspace $ws17
-bindsym $mod+Ctrl+Shift+8 move container to workspace $ws18
-bindsym $mod+Ctrl+Shift+9 move container to workspace $ws19
-bindsym $mod+Ctrl+Shift+0 move container to workspace $ws20
-
-bindsym $mod+Ctrl+Shift+m move container to workspace $ws_mail
-bindsym $mod+Ctrl+Shift+e move container to workspace $ws_entertainment
 
 # for cycling the workspaces
 bindsym $mod+Shift+Ctrl+l workspace next

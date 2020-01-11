@@ -59,7 +59,7 @@ wireless _first_ {
 }
 
 ethernet _first_ {
-	format_up = " %essid (%ip)"
+	format_up = " %ip"
 	format_down = ""
 }
 
