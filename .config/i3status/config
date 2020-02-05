@@ -49,7 +49,7 @@ volume master {
 }
 
 disk "/" {
-	format = " %free"
+	format = " %avail"
 	prefix_type = decimal
 }
 
