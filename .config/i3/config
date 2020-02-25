@@ -49,7 +49,8 @@ exec --no-startup-id syncthing -no-browser
 exec --no-startup-id redshift-gtk
 exec --no-startup-id blueberry-tray
 exec --no-startup-id telegram-desktop -startintray 
-exec --no-startup-id /opt/protonmail/bridge/protonmail-bridge --no-window
+exec --no-startup-id protonmail-bridge --no-window
+exec --no-startup-id thunderbird
 exec --no-startup-id riot-desktop --hidden
 exec --no-startup-id xss-lock -- i3lock --blur=1 -e --indicator
 exec --no-startup-id fish -c ssh-agent
@@ -130,6 +131,9 @@ set $ws10 "10"
 
 set $ws_mail "M"
 set $ws_entertainment "E"
+
+# always open thunderbird in M workspace
+assign [class="Thunderbird"] → M
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1

@@ -33,7 +33,7 @@
 	date = relative
 
 [format]
-	pretty = format:%C(yellow)%h%C(reset) | %C(cyan)%>(14)%ad%C(reset) | %C(green)%<(8,trunc)%aN%C(reset) |%C(red)%d%C(reset) %s
+	pretty = format:%C(yellow)%h%C(reset) | %C(cyan)%ad%C(reset) | %C(green)%aN%C(reset) |%C(red)%d%C(reset) %s
 
 [core]
 	# unicode symbol format
