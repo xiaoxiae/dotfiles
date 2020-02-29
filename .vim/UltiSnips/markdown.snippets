@@ -1,1 +1,291 @@
-extends vimwiki
+snippet l "link"
+[${VISUAL}]($1)$0
+endsnippet
+
+snippet bf "bold"
+**${1:${VISUAL}}**$0
+endsnippet
+
+snippet it "italics"
+_${1:${VISUAL}}_$0
+endsnippet
+
+snippet tw "typewriter"
+\`${1:${VISUAL}}\`$0
+endsnippet
+
+snippet dq "double czech quotes"
+„${1:${VISUAL}}“$0
+endsnippet
+
+snippet sq "single czech quotes"
+‚${1:${VISUAL}}‘$0
+endsnippet
+
+
+# LATEX
+snippet env "compact environment" w
+\begin{$1} ${2:${VISUAL}} \end{$1}$0
+endsnippet
+
+snippet Env "environment" w
+\begin{$1}
+	${2:${VISUAL}}
+\end{$1}$0
+endsnippet
+
+# JEKYLL
+snippet xopp "xopp tag" w
+{% xopp ${1:${VISUAL}} %}$0
+endsnippet
+
+snippet lm "liquid math" w
+{% latex %}${1:${VISUAL}}{% endlatex %}$0
+endsnippet
+
+snippet LM "liquid display math" w
+{% latex display %}${1:${VISUAL}}{% endlatex %}$0
+endsnippet
+
+
+## MATH
+snippet MA "display math" w
+\begin{align*}
+	${1:${VISUAL}}
+\end{align*}$0
+endsnippet
+
+snippet MG "display math" w
+\begin{gather*}
+	${1:${VISUAL}}
+\end{gather*}$0
+endsnippet
+
+snippet m "inline math"
+\$${1:${VISUAL}}\$$0
+endsnippet
+
+snippet M "display math"
+\$\$${1:${VISUAL}}\$\$$0
+endsnippet
+
+### COMMANDS
+snippet / "fraction" i
+\frac\{${1:${VISUAL}}\}\{$2\}$0
+endsnippet
+
+snippet _ "subscript" i
+_{${1:${VISUAL}}}$0
+endsnippet
+
+
+snippet ^ "superscript" i
+^{${1:${VISUAL}}}$0
+endsnippet
+
+snippet . "dot" w
+\cdot$0
+endsnippet
+
+snippet l. "ldots" w
+\ldots$0
+endsnippet
+
+
+### TEXT MODES
+snippet txt "text" w
+\text{${1:${VISUAL}}}$0
+endsnippet
+
+snippet rm "math rm" w
+\mathrm{${1:${VISUAL}}}$0
+endsnippet
+
+snippet cal "math cal" w
+\mathcal{${1:${VISUAL}}}$0
+endsnippet
+
+
+### OVER/UNDERBRACKETS
+snippet _{ "underbrace" w
+\underbrace{${1:${VISUAL}}}_{$2}$0
+endsnippet
+
+snippet ^{ "underbrace" w
+\overbrace{${1:${VISUAL}}}^{$2}$0
+endsnippet
+
+snippet _[ "underbracket" w
+\underbracket{${1:${VISUAL}}}_{$2}$0
+endsnippet
+
+snippet ^[ "underbracket" w
+\overbracket{${1:${VISUAL}}}^{$2}$0
+endsnippet
+
+### BRACKETS
+snippet () "round" i
+\left(${1:${VISUAL}}\right)$0
+endsnippet
+
+snippet [] "square" i
+\left[${1:${VISUAL}}\right]$0
+endsnippet
+
+snippet {} "curly" i
+\left\\{${1:${VISUAL}}\right\\}$0
+endsnippet
+
+snippet abs "abs" i
+\left|${1:${VISUAL}}\right|$0
+endsnippet
+
+### OPERATORS
+snippet sqrt "sqrt" i
+\sqrt\{${1:${VISUAL}}\}$0
+endsnippet
+
+snippet root "n-th root" i
+\sqrt[$1]\{${2:${VISUAL}}\}$0
+endsnippet
+
+snippet log "logarithm" i
+\log\{$1\}\{${2:${VISUAL}}\}$0
+endsnippet
+
+snippet Sum "sum" w
+\sum_\{$1\}^\{$2\}$0
+endsnippet
+
+snippet Prod "product" w
+\prod_\{$1\}^\{$2\}$0
+endsnippet
+
+snippet Cup "big cup" w
+\bigcup_\{$1\}^\{$2\}$0
+endsnippet
+
+snippet Cap "big cap" w
+\bigcap_\{$1\}^\{$2\}$0
+endsnippet
+
+
+### BOOLEAN AND EQUALITY OPERATORS
+snippet ! "logical not" w
+\neg
+endsnippet
+
+snippet || "logical or" w
+\lor
+endsnippet
+
+snippet && "logical and" w
+\land
+endsnippet
+
+snippet != "not equal" i
+\neq
+endsnippet
+
+snippet => "implication" i
+\implies$0
+endsnippet
+
+snippet -> "maps to" w
+\mapsto$0
+endsnippet
+
+snippet <=> "if and only if" i 
+\iff$0
+endsnippet
+
+snippet === "is equivalent to" i
+\equiv$0
+endsnippet
+
+snippet .= "dot equality" w
+\doteq$0
+endsnippet
+
+snippet ~ "similarity" i
+\sim
+endsnippet
+
+snippet ~= "congruency" i
+\cong
+endsnippet
+
+snippet ~~ "approximately" i
+\approx$0
+endsnippet
+
+snippet <= "less than or equal" i
+\le$0
+endsnippet
+
+snippet >= "greater than or equal" i
+\ge$0
+endsnippet
+
+snippet | "divides" w
+\mid
+endsnippet
+
+snippet !| "does not divide" w
+\not\mid
+endsnippet
+
+
+### TRIGONOMETRY
+snippet sin "sin" w
+\sin\left(${1:${VISUAL}}\right)$0
+endsnippet
+
+snippet cos "cos" w
+\cos\left(${1:${VISUAL}}\right)$0
+endsnippet
+
+snippet tan "tan" w
+\tan\left(${1:${VISUAL}}\right)$0
+endsnippet
+
+### SET OPERATIONS
+snippet c= "subset" w
+\subseteq
+endsnippet
+
+snippet \ "set minus" w
+\setminus
+endsnippet
+
+
+### NUMBER SETS
+snippet R "real numbers" w
+\mathbb{R}
+endsnippet
+
+snippet N "natural numbers" w
+\mathbb{N}
+endsnippet
+
+snippet C "complex numbers" w
+\mathbb{C}
+endsnippet
+
+snippet Z "integral numbers" w
+\mathbb{Z}
+endsnippet
+
+snippet Q "rational numbers" w
+\mathbb{Q}
+endsnippet
+
+
+### OTHER NOTATION
+snippet O "O notation" w
+\mathcal{O}
+endsnippet
+
+snippet E "expected value" w
+\mathbb{E}
+endsnippet
