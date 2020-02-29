@@ -84,13 +84,13 @@ autocmd FileType cpp    map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
 autocmd FileType cs     map <F2> :w \| !mcs % && mono %:r.exe<cr>
 
 " insert Xournal++ note
-command Diagram :call InsertXournalppNote()
-function! InsertXournalppNote()
+command Diagram :call InsertXournalNote()
+function! InsertXournalNote()
 	:let l:file_name = strftime('%y-%d-%m_%H-%M-%S.xopp')
 	:silent exec "!mkdir -p diagrams/"
 	:silent exec "!cp /opt/blank_xournalpp_file.xopp diagrams/" . l:file_name
 	:silent exec "!xournalpp diagrams/" . l:file_name . " &" | redraw!
-	:exec ":normal i" . "[](diagrams/" . l:file_name . ")"
+	:exec ":normal i" . l:file_name
 	:normal F[
 endfunction
 
