@@ -48,7 +48,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id redshift-gtk
 exec --no-startup-id blueberry-tray
-exec --no-startup-id telegram-desktop -startintray 
+exec --no-startup-id telegram-desktop -startintray
 exec --no-startup-id protonmail-bridge --no-window
 exec --no-startup-id thunderbird
 exec --no-startup-id riot-desktop --hidden
@@ -129,11 +129,12 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-set $ws_mail "M"
-set $ws_entertainment "E"
+# special work places
+set $ws_mail "11 (M)"
+set $ws_password_manager "12 (L)"
 
-# always open thunderbird in M workspace
-assign [class="Thunderbird"] → M
+assign [class="Thunderbird"] → 11 (M)
+assign [class="KeePassXC"] → 12 (L)
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -147,8 +148,9 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-bindsym $mod+m workspace $ws_mail
-bindsym $mod+e workspace $ws_entertainment
+# TODO
+bindsym $mod+minus workspace $ws_mail
+bindsym $mod+equal workspace $ws_password_manager
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
