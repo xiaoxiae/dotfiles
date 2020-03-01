@@ -18,10 +18,12 @@ set timeoutlen=1000 ttimeoutlen=0  " no delay after exiting visual mode
 
 set colorcolumn=88  " ruler (inspired by Python's Black)
 
+set list!
+set listchars=tab:>-,trail:~
 
 " === TABS === "
 set tabstop=4 shiftwidth=4  " tab is 4 characters wide
-set autoindent smartindent  " smart indenting
+set autoindent smartindent  " smart indenting f jdaiof jadsiof jiadsfjioads jj
 filetype plugin indent on   " indenting
 
 
@@ -72,37 +74,18 @@ nnoremap H :bnext<CR>
 nnoremap L :bprevious<CR>
 
 
-" === TAB NAVIGATION === "
-nnoremap <C-H> gT
-nnoremap <C-L> gt
-
-
 " === CUSTOM COMMANDS === "
 autocmd FileType python map <F2> :w \| !py %<cr>
 autocmd FileType c      map <F2> :w \| !gcc % -o %:r && ./%:r<cr>
 autocmd FileType cpp    map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
 autocmd FileType cs     map <F2> :w \| !mcs % && mono %:r.exe<cr>
 
-" insert Xournal++ note
-command Diagram :call InsertXournalNote()
-function! InsertXournalNote()
-	:let l:file_name = strftime('%y-%d-%m_%H-%M-%S.xopp')
-	:silent exec "!mkdir -p diagrams/"
-	:silent exec "!cp /opt/blank_xournalpp_file.xopp diagrams/" . l:file_name
-	:silent exec "!xournalpp diagrams/" . l:file_name . " &" | redraw!
-	:exec ":normal i" . l:file_name
-	:normal F[
-endfunction
-
-
 " === FILETYPE-SPECIFIC BEHAVIOR === "
 " decrease indentation in Tex documents
 autocmd FileType tex  setlocal tabstop=2 shiftwidth=2
 autocmd FileType html setlocal tabstop=2 shiftwidth=2
-
-" markdown indentation and filetype
-autocmd FileType markdown setlocal ft=vimwiki
 autocmd FileType vimwiki  setlocal wrap
+autocmd FileType markdown setlocal ft=vimwiki
 
 " Python spell check and auto format
 autocmd FileType python  execute ':Spe'
@@ -110,14 +93,6 @@ autocmd BufWritePre *.py execute ':Black'
 
 " unify tex flavors, since I really only work with LaTeX
 let g:tex_flavor = "latex"
-
-
-" === TEMPORARY === "
-" disable up/down/left/right keys for better habits
-noremap <Up>    <NOP>
-noremap <Down>  <NOP>
-noremap <Left>  <NOP>
-noremap <Right> <NOP>
 
 
 " === MISCELLANEOUS === "
@@ -134,7 +109,7 @@ command Spc :set spell spelllang=cz
 command Spe :set spell spelllang=en_us
 command Spn :set nospell
 
-" highlight incorrectly spelled words
+" highlight incorrectly spelled words (due to Badwolf being bad)
 hi SpellBad ctermfg=red
 hi SpellBad cterm=underline
 
