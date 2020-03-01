@@ -76,9 +76,15 @@ nnoremap L :bprevious<CR>
 
 " === CUSTOM COMMANDS === "
 autocmd FileType python map <F2> :w \| !py %<cr>
+
 autocmd FileType c      map <F2> :w \| !gcc % -o %:r && ./%:r<cr>
+autocmd FileType c      map <F3> :w \| !gcc -g -c %; objdump -S %:r.o \| vim -<cr>
+
 autocmd FileType cpp    map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
+autocmd FileType cpp    map <F3> :w \| !g++ -g -c %; objdump -S %:r.o \| vim -<cr>
+
 autocmd FileType cs     map <F2> :w \| !mcs % && mono %:r.exe<cr>
+
 
 " === FILETYPE-SPECIFIC BEHAVIOR === "
 " decrease indentation in Tex documents
