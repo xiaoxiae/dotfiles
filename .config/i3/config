@@ -124,12 +124,12 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# special work places
-set $ws_mail "11 (M)"
-set $ws_password_manager "12 (L)"
+set $ws_mail "11 M"
+set $ws_password_manager "12 L"
+set $ws_entertainment "13 E"
 
-assign [class="Thunderbird"] → 11 (M)
-assign [class="KeePassXC"] → 12 (L)
+assign [class="Thunderbird"] → 11 M
+assign [class="KeePassXC"] → 12 L
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -143,9 +143,9 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-# TODO
 bindsym $mod+minus workspace $ws_mail
 bindsym $mod+equal workspace $ws_password_manager
+bindsym $mod+BackSpace workspace $ws_entertainment
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -158,6 +158,10 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
+bindsym $mod+Shift+minus move container to workspace $ws_mail
+bindsym $mod+Shift+equal move container to workspace $ws_password_manager
+bindsym $mod+Shift+BackSpace move container to workspace $ws_entertainment
 
 # for cycling the workspaces
 bindsym $mod+Shift+Ctrl+l workspace next
