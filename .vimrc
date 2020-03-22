@@ -64,6 +64,9 @@ nnoremap k gk
 " more natural splitting
 set splitbelow splitright
 
+" enable mouse options
+set mouse=a
+
 " automatic split resize
 autocmd VimResized * wincmd =
 
@@ -75,15 +78,25 @@ nnoremap L :bprevious<CR>
 
 
 " === CUSTOM COMMANDS === "
-autocmd FileType python map <F2> :w \| !py %<cr>
+autocmd FileType python  map <F2> :w \| !py %<cr>
 
-autocmd FileType c      map <F2> :w \| !gcc % -o %:r && ./%:r<cr>
-autocmd FileType c      map <F3> :w \| !gcc -g -c %; objdump -S %:r.o \| vim -<cr>
+autocmd FileType arduino map <F2> :w \| !arduino-cli compile --fqbn arduino:avr:uno .<cr>
+autocmd FileType arduino map <F3> :w \| !arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno .<cr>
 
-autocmd FileType cpp    map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
-autocmd FileType cpp    map <F3> :w \| !g++ -g -c %; objdump -S %:r.o \| vim -<cr>
+autocmd FileType c       map <F2> :w \| !gcc % -o %:r && ./%:r<cr>
+autocmd FileType cpp     map <F3> :w \| !gcc % -o %:r<cr>
 
-autocmd FileType cs     map <F2> :w \| !mcs % && mono %:r.exe<cr>
+autocmd FileType vimwiki map <F2> :w \| !md_to_pdf -f="%" -t=h; if test -e %:r.pdf; zathura %:r.pdf; end<cr>
+autocmd FileType vimwiki map <F3> :w \| !md_to_pdf -f="%" -t=h<cr>
+
+autocmd FileType tex     map <F3> :w \| !lualatex -shell-escape "%"; bibtex "%:r"; lualatex -shell-escape "%"<cr>
+
+autocmd FileType sh      map <F2> :w \| !./%<cr>
+
+autocmd FileType cpp     map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
+autocmd FileType cpp     map <F3> :w \| !g++ % -o %:r<cr>
+
+autocmd FileType cs      map <F2> :w \| !mcs % && mono %:r.exe<cr>
 
 
 " === FILETYPE-SPECIFIC BEHAVIOR === "
@@ -123,8 +136,9 @@ hi SpellBad cterm=underline
 " vimwiki
 let g:vimwiki_list = [{'path': '~/Documents/Wiki/', 'diary_rel_path': 'Diary/', 'syntax': 'markdown', 'ext': '.md'}]
 
-let g:vimwiki_table_mappings = 0  "disable tab mappings in insert mode 
+let g:vimwiki_table_mappings = 0  " disable tab mappings in insert mode 
 let g:vimwiki_global_ext = 0      " don't use vimwiki format for other md files
+let g:vimwiki_conceallevel = 0    " disable conceal level
 
 " ultisnips
 let g:UltiSnipsSnippetsDir=$HOME.'/.vim/UltiSnips/'
@@ -138,3 +152,5 @@ let g:ale_lint_on_text_changed='never'
 let g:ale_lint_on_insert_leave='never'
 let g:ale_lint_on_enter='never'
 let g:ale_lint_on_filetype_changed='never'
+
+set conceallevel=0
