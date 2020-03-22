@@ -51,6 +51,7 @@ exec --no-startup-id blueberry-tray
 exec --no-startup-id telegram-desktop -startintray
 exec --no-startup-id protonmail-bridge --no-window
 exec --no-startup-id thunderbird
+exec --no-startup-id keepassxc
 exec --no-startup-id riot-desktop --hidden
 exec --no-startup-id xss-lock -- i3lock --blur=1 -e --indicator
 exec --no-startup-id fish -c ssh-agent
