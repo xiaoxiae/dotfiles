@@ -89,7 +89,9 @@ autocmd FileType cpp     map <F3> :w \| !gcc % -o %:r<cr>
 autocmd FileType vimwiki map <F2> :w \| !md_to_pdf -f="%" -t=h; if test -e %:r.pdf; zathura %:r.pdf; end<cr>
 autocmd FileType vimwiki map <F3> :w \| !md_to_pdf -f="%" -t=h<cr>
 
-autocmd FileType tex     map <F3> :w \| !lualatex -shell-escape "%"; bibtex "%:r"; lualatex -shell-escape "%"<cr>
+" makes more sense to separate the compile and the bib stuff
+autocmd FileType tex     map <F3> :w \| !lualatex -shell-escape "%"<cr>
+autocmd FileType tex     map <F4> :w \| !bibtex "%:r"<cr>
 
 autocmd FileType sh      map <F2> :w \| !./%<cr>
 
