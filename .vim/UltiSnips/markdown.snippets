@@ -34,6 +34,16 @@ snippet Env "environment" w
 \end{$1}$0
 endsnippet
 
+snippet itemize "itemize environment" w
+\begin{itemize}
+	${1:${VISUAL}}
+\end{itemize}$0
+endsnippet
+
+snippet i "item" b
+\item $0
+endsnippet
+
 # JEKYLL
 snippet xopp "xopp tag" w
 {% xopp ${1:${VISUAL}} %}$0
@@ -138,6 +148,14 @@ endsnippet
 
 snippet abs "abs" i
 \left|${1:${VISUAL}}\right|$0
+endsnippet
+
+snippet floor "floor" i
+\left\lfloor ${1:${VISUAL}} \right\rfloor$0
+endsnippet
+
+snippet ceil "ceil" i
+\left\lceil ${1:${VISUAL}} \right\rceil$0
 endsnippet
 
 ### OPERATORS
