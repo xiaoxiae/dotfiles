@@ -155,4 +155,10 @@ let g:ale_lint_on_insert_leave='never'
 let g:ale_lint_on_enter='never'
 let g:ale_lint_on_filetype_changed='never'
 
-set conceallevel=0
+" gitgutter
+autocmd BufWritePost * GitGutter  " real-time updates
+
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+
