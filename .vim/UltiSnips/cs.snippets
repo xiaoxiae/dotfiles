@@ -1,0 +1,15 @@
+extends c
+
+snippet main "A basic cs file." b
+using System;
+
+static class Program {
+	static void Main() {
+		$0
+	}
+}
+endsnippet
+
+snippet p "print" b
+Console.WriteLine(${1:${VISUAL}});$0
+endsnippet
