@@ -1,0 +1,3 @@
+[submodule "/home/xiaoxiae/.vim/pack/plugins/start/ultisnips"]
+	path = /home/xiaoxiae/.vim/pack/plugins/start/ultisnips
+	url = https://github.com/sirver/UltiSnips
