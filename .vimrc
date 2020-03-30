@@ -94,6 +94,7 @@ autocmd FileType tex     map <F3> :w \| !lualatex -shell-escape "%"<cr>
 autocmd FileType tex     map <F4> :w \| !bibtex "%:r"<cr>
 
 autocmd FileType sh      map <F2> :w \| !./%<cr>
+autocmd FileType conf    map <F2> :w \| !fish %<cr>
 
 autocmd FileType cpp     map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
 autocmd FileType cpp     map <F3> :w \| !g++ % -o %:r<cr>
