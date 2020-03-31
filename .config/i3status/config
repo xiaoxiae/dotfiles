@@ -20,25 +20,6 @@ order += "tztime local"
 
 
 ### SETTINGS ###
-battery all {
-	format = "%status %percentage %remaining"
-
-	status_bat = ""
-	status_chr = ""
-	status_unk = ""
-    status_full = ""
-
-	low_threshold = 15
-    threshold_type = percentage
-}
-
-read_file brightness {
-	path = "/sys/class/backlight/intel_backlight/brightness"
-	format = " %content" 
-
-	color_good = '#ffffff'  
-}
-
 volume master {
 	format = " %volume"
 	format_muted = " %volume"
@@ -51,11 +32,6 @@ volume master {
 disk "/" {
 	format = " %avail"
 	prefix_type = decimal
-}
-
-wireless _first_ {
-	format_up = " %essid (%ip)"
-	format_down = ""
 }
 
 ethernet _first_ {
