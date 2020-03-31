@@ -100,6 +100,7 @@ autocmd FileType cpp     map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
 autocmd FileType cpp     map <F3> :w \| !g++ % -o %:r<cr>
 
 autocmd FileType cs      map <F2> :w \| !mcs % && mono %:r.exe<cr>
+autocmd FileType cs      map <F3> :w \| !mcs %<cr>
 
 
 " === FILETYPE-SPECIFIC BEHAVIOR === "
@@ -142,6 +143,18 @@ let g:vimwiki_list = [{'path': '~/Documents/Wiki/', 'diary_rel_path': 'Diary/', 
 let g:vimwiki_table_mappings = 0  " disable tab mappings in insert mode 
 let g:vimwiki_global_ext = 0      " don't use vimwiki format for other md files
 let g:vimwiki_conceallevel = 0    " disable conceal level
+
+function! VimwikiLinkHandler(link)
+  try
+    let browser = '/usr/bin/firefox'
+    execute '!start "'.browser.'" ' . a:link
+    return 1
+  catch
+    echo "This can happen for a variety of reasons ..."
+  endtry
+  return 0
+endfunction
+
 
 " ultisnips
 let g:UltiSnipsSnippetsDir=$HOME.'/.vim/UltiSnips/'
