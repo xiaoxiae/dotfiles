@@ -43,6 +43,7 @@ exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
 
 ### PROGRAM STARTUP ###
 exec --no-startup-id dunst
+exec --no-startup-id discord
 exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id redshift-gtk
@@ -126,10 +127,11 @@ set $ws10 "10"
 
 set $ws_mail "11 M"
 set $ws_password_manager "12 L"
-set $ws_entertainment "13 E"
+set $ws_messaging "13 D"
 
 assign [class="Thunderbird"] → 11 M
 assign [class="KeePassXC"] → 12 L
+assign [class="discord"] → 13 D
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -145,7 +147,7 @@ bindsym $mod+0 workspace $ws10
 
 bindsym $mod+minus workspace $ws_mail
 bindsym $mod+equal workspace $ws_password_manager
-bindsym $mod+BackSpace workspace $ws_entertainment
+bindsym $mod+BackSpace workspace $ws_messaging
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -161,7 +163,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 bindsym $mod+Shift+minus move container to workspace $ws_mail
 bindsym $mod+Shift+equal move container to workspace $ws_password_manager
-bindsym $mod+Shift+BackSpace move container to workspace $ws_entertainment
+bindsym $mod+Shift+BackSpace move container to workspace $ws_messaging
 
 # for cycling the workspaces
 bindsym $mod+Shift+Ctrl+l workspace next

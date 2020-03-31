@@ -100,6 +100,7 @@ autocmd FileType cpp     map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
 autocmd FileType cpp     map <F3> :w \| !g++ % -o %:r<cr>
 
 autocmd FileType cs      map <F2> :w \| !mcs % && mono %:r.exe<cr>
+autocmd FileType cs      map <F3> :w \| !mcs %<cr>
 
 
 " === FILETYPE-SPECIFIC BEHAVIOR === "
