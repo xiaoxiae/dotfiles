@@ -5,15 +5,6 @@ set $mod Mod4
 
 
 ### CUSOM BINDINGS ###
-# control the volume keys
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
-bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
-
-# control screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-
 # rofi run and drun
 bindsym $mod+p exec rofi -show drun -show-icons -theme Monokai
 bindsym $mod+d exec rofi -show run -theme Monokai
@@ -43,26 +34,17 @@ exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
 ### PROGRAM STARTUP ###
 exec --no-startup-id dunst
 exec --no-startup-id discord
-exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id redshift-gtk
-exec --no-startup-id blueberry-tray
 exec --no-startup-id telegram-desktop -startintray
 exec --no-startup-id protonmail-bridge --no-window
 exec --no-startup-id thunderbird
 exec --no-startup-id keepassxc
 exec --no-startup-id riot-desktop --hidden
-exec --no-startup-id xss-lock -- i3lock --blur=1 -e --indicator
 exec --no-startup-id fish -c ssh-agent
 
 
 ### KEYBOARD AND TOUCHSCREEN SETTINGS ###
-# tap to touch
-exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
-
-# fix FireFox touch not working
-exec xsetwacom --set "Wacom HID 50BF Finger touch" Gesture off
-
 # use the ucw keyboard (on R-Alt) and swap esc with caps
 exec_always setxkbmap -layout "us,cz" -variant ",ucw" -option caps:swapescape grp:switch
 
