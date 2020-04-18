@@ -64,9 +64,6 @@ nnoremap k gk
 " more natural splitting
 set splitbelow splitright
 
-" enable mouse options
-set mouse=a
-
 " automatic split resize
 autocmd VimResized * wincmd =
 
@@ -85,11 +82,11 @@ autocmd FileType arduino map <F3> :w \| !arduino-cli upload -p /dev/ttyACM0 --fq
 
 autocmd FileType c       map <F2> :w \| !gcc % -o %:r && ./%:r<cr>
 autocmd FileType cpp     map <F3> :w \| !gcc % -o %:r<cr>
+autocmd FileType cpp     map <F4> :w \| !cat ./%:r.in \| ./%:r<cr>
 
 autocmd FileType vimwiki map <F2> :w \| !md_to_pdf -f="%" -t=h; if test -e %:r.pdf; zathura %:r.pdf; end<cr>
 autocmd FileType vimwiki map <F3> :w \| !md_to_pdf -f="%" -t=h<cr>
 
-" makes more sense to separate the compile and the bib stuff
 autocmd FileType tex     map <F3> :w \| !lualatex -shell-escape "%"<cr>
 autocmd FileType tex     map <F4> :w \| !bibtex "%:r"<cr>
 
@@ -99,8 +96,8 @@ autocmd FileType conf    map <F2> :w \| !fish %<cr>
 autocmd FileType cpp     map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
 autocmd FileType cpp     map <F3> :w \| !g++ % -o %:r<cr>
 
-autocmd FileType cs      map <F2> :w \| !mcs % && mono %:r.exe<cr>
-autocmd FileType cs      map <F3> :w \| !mcs %<cr>
+autocmd FileType cs      map <F2> :w \| !csc % -r:System.Windows.Forms.dll && mono %:r.exe<cr>
+autocmd FileType cs      map <F3> :w \| !csc % -r:System.Windows.Forms.dllcs %<cr>
 
 
 " === FILETYPE-SPECIFIC BEHAVIOR === "
@@ -112,7 +109,6 @@ autocmd FileType markdown setlocal ft=vimwiki
 
 " Python spell check and auto format
 autocmd FileType python  execute ':Spe'
-autocmd BufWritePre *.py execute ':Black'
 
 " unify tex flavors, since I really only work with LaTeX
 let g:tex_flavor = "latex"
