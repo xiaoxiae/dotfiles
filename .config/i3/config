@@ -19,8 +19,8 @@ bindsym $mod+p exec rofi -show drun -show-icons -theme Monokai
 bindsym $mod+d exec rofi -show run -theme Monokai
 
 # printscreen
-bindsym $mod+Print exec mate-screenshot -a
-bindsym $modShift+Print exec mate-screenshot
+bindsym $mod+Print exec mate-screenshot -a -c
+bindsym $modShift+Print exec mate-screenshot -c
 
 
 ### COMPUTER STATE CONTROL ###
