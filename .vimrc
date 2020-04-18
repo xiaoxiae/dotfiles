@@ -64,9 +64,6 @@ nnoremap k gk
 " more natural splitting
 set splitbelow splitright
 
-" enable mouse options
-set mouse=a
-
 " automatic split resize
 autocmd VimResized * wincmd =
 
