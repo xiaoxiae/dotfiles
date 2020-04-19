@@ -13,8 +13,8 @@
   <property name="mainWndWidth" value="1360"/>
   <property name="mainWndHeight" value="740"/>
   <property name="maximized" value="false"/>
-  <property name="showSidebar" value="true"/>
-  <property name="sidebarWidth" value="150"/>
+  <property name="showSidebar" value="false"/>
+  <property name="sidebarWidth" value="50"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
   <property name="menubarVisible" value="true"/>
@@ -52,13 +52,13 @@
   <property name="snapGrid" value="true"/>
   <property name="snapGridTolerance" value="0.25000000"/>
   <property name="touchWorkaround" value="false"/>
-  <property name="selectionBorderColor" value="16711680"/>
-  <property name="backgroundColor" value="14473941"/>
-  <property name="selectionMarkerColor" value="7512015"/>
+  <property name="selectionBorderColor" value="-65536"/>
+  <property name="backgroundColor" value="-2303275"/>
+  <property name="selectionMarkerColor" value="-9265201"/>
   <!--The count of rendered PDF pages which will be cached.-->
   <!--Config for new pages-->
   <property name="pdfPageCacheSize" value="10"/>
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSettings=true&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundColor=#ffffff&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=true&#10;size=595.275591x841.889764&#10;backgroundType=graph&#10;backgroundColor=#ffffffff&#10;"/>
   <property name="sizeUnit" value=""/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
@@ -79,24 +79,24 @@
   <property name="font" font="Sans" size="12.00000000"/>
   <data name="buttonConfig">
     <data name="default">
-      <attribute name="color" type="hex" value="000000"/>
+      <attribute name="color" type="hex" value="ff000000"/>
       <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="thin"/>
+      <attribute name="size" type="string" value="medium"/>
       <attribute name="tool" type="string" value="pen"/>
     </data>
     <data name="eraser">
       <attribute name="tool" type="string" value="none"/>
     </data>
     <data name="middle">
-      <attribute name="eraserMode" type="string" value="none"/>
-      <attribute name="size" type="string" value="none"/>
-      <attribute name="tool" type="string" value="eraser"/>
+      <attribute name="tool" type="string" value="selectRegion"/>
     </data>
     <data name="right">
       <attribute name="tool" type="string" value="none"/>
     </data>
     <data name="stylus">
-      <attribute name="tool" type="string" value="none"/>
+      <attribute name="eraserMode" type="string" value="none"/>
+      <attribute name="size" type="string" value="none"/>
+      <attribute name="tool" type="string" value="eraser"/>
     </data>
     <data name="stylus2">
       <attribute name="tool" type="string" value="none"/>
@@ -107,7 +107,24 @@
       <attribute name="tool" type="string" value="none"/>
     </data>
   </data>
-  <data name="deviceClasses"/>
+  <data name="deviceClasses">
+    <data name="SynPS/2 Synaptics TouchPad">
+      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceSource" type="int" value="6"/>
+    </data>
+    <data name="Wacom HID 50BF Finger touch">
+      <attribute name="deviceClass" type="int" value="4"/>
+      <attribute name="deviceSource" type="int" value="5"/>
+    </data>
+    <data name="Wacom HID 50BF Pen eraser">
+      <attribute name="deviceClass" type="int" value="3"/>
+      <attribute name="deviceSource" type="int" value="2"/>
+    </data>
+    <data name="Wacom HID 50BF Pen stylus">
+      <attribute name="deviceClass" type="int" value="2"/>
+      <attribute name="deviceSource" type="int" value="1"/>
+    </data>
+  </data>
   <data name="tools">
     <attribute name="current" type="string" value="pen"/>
     <data name="drawArrow">
@@ -124,8 +141,8 @@
     </data>
     <data name="eraser">
       <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
-      <attribute name="type" type="string" value="default"/>
+      <attribute name="size" type="string" value="THIN"/>
+      <attribute name="type" type="string" value="deleteStroke"/>
     </data>
     <data name="hand">
       <attribute name="drawingType" type="string" value="default"/>
@@ -141,7 +158,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="3333cc"/>
+      <attribute name="color" type="hex" value="ff000000"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
@@ -171,5 +188,11 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
   </data>
-  <data name="touch"/>
+  <data name="touch">
+    <attribute name="cmdDisable" type="string" value=""/>
+    <attribute name="cmdEnable" type="string" value=""/>
+    <attribute name="disableTouch" type="boolean" value="false"/>
+    <attribute name="method" type="string" value="auto"/>
+    <attribute name="timeout" type="int" value="1000"/>
+  </data>
 </settings>
