@@ -81,6 +81,9 @@ autocmd FileType arduino map <F2> :w \| !arduino-cli compile --fqbn arduino:avr:
 autocmd FileType arduino map <F3> :w \| !arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno .<cr>
 
 autocmd FileType c       map <F2> :w \| !gcc % -o %:r && ./%:r<cr>
+autocmd FileType c       map <F3> :w \| !gcc % -o %:r<cr>
+autocmd FileType c       map <F4> :w \| !cat ./%:r.in \| ./%:r<cr>
+
 autocmd FileType cpp     map <F3> :w \| !gcc % -o %:r<cr>
 autocmd FileType cpp     map <F4> :w \| !cat ./%:r.in \| ./%:r<cr>
 
