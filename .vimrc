@@ -91,13 +91,14 @@ autocmd FileType tex     map <F3> :w \| !lualatex -shell-escape "%"<cr>
 autocmd FileType tex     map <F4> :w \| !bibtex "%:r"<cr>
 
 autocmd FileType sh      map <F2> :w \| !./%<cr>
+autocmd FileType sh      map <F3> :w \| !bash %<cr>
 autocmd FileType conf    map <F2> :w \| !fish %<cr>
 
 autocmd FileType cpp     map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
 autocmd FileType cpp     map <F3> :w \| !g++ % -o %:r<cr>
 
-autocmd FileType cs      map <F2> :w \| !csc % -r:System.Windows.Forms.dll && mono %:r.exe<cr>
-autocmd FileType cs      map <F3> :w \| !csc % -r:System.Windows.Forms.dllcs %<cr>
+autocmd FileType cs      map <F2> :w \| !csc % && mono %:r.exe<cr>
+autocmd FileType cs      map <F3> :w \| !csc % %<cr>
 
 
 " === FILETYPE-SPECIFIC BEHAVIOR === "
