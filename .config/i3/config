@@ -19,8 +19,7 @@ bindsym $mod+p exec rofi -show drun -show-icons -theme Monokai
 bindsym $mod+d exec rofi -show run -theme Monokai
 
 # printscreen
-bindsym $mod+Print exec mate-screenshot -a -c
-bindsym $modShift+Print exec mate-screenshot -c
+bindsym $mod+Print exec xfce4-screenshooter -r -c
 
 
 ### COMPUTER STATE CONTROL ###
