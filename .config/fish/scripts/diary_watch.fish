@@ -1,12 +1,13 @@
 #!/bin/env fish
 
-cd ~/Documents/Wiki/Diary/
+cd ~/Documents/Wiki/
 
 while true
-    while inotifywait -e close_write diary.md
-    end
+	inotifywait -e close_write -r . --exclude .git 
 
-    git add .
-    git commit -m "automated commit"
+	sleep 0.5
+
+	git add .
+	git commit -m "automated commit"
 end
 
