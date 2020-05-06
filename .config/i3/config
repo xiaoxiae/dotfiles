@@ -149,8 +149,8 @@ bindsym $mod+Shift+equal move container to workspace $ws_password_manager
 bindsym $mod+Shift+BackSpace move container to workspace $ws_messaging
 
 # for cycling the workspaces
-bindsym $mod+Shift+Ctrl+l workspace next
-bindsym $mod+Shift+Ctrl+h workspace prev
+bindsym $mod+Shift+Ctrl+l move workspace to output right
+bindsym $mod+Shift+Ctrl+h move workspace to output left
 
 # focus parent (adult) / child
 bindsym $mod+a focus parent
