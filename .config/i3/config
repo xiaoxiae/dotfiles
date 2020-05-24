@@ -41,8 +41,6 @@ exec --no-startup-id protonmail-bridge --no-window
 exec --no-startup-id thunderbird
 exec --no-startup-id keepassxc
 exec --no-startup-id riot-desktop --hidden
-exec --no-startup-id fish -c ssh-agent
-exec --no-startup-id xfce4-clipman
 exec --no-startup-id fish -c ~/.config/fish/scripts/diary_watch.fish
 
 
