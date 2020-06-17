@@ -47,11 +47,12 @@ exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id redshift-gtk
 exec --no-startup-id blueman-applet
-exec --no-startup-id telegram-desktop -startintray
+exec --no-startup-id telegram-desktop
 exec --no-startup-id protonmail-bridge --no-window
 exec --no-startup-id thunderbird
 exec --no-startup-id keepassxc
-exec --no-startup-id riot-desktop --hidden
+exec --no-startup-id riot-desktop
+exec --no-startup-id caprine
 exec --no-startup-id xss-lock -- i3lock --blur=1 -e --indicator
 exec --no-startup-id fish -c ~/.config/fish/scripts/diary_watch.fish
 exec --no-startup-id xfce4-clipman
@@ -113,7 +114,7 @@ bindsym $mod+f fullscreen toggle
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
 
-# standard desktops
+# desktops
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -124,48 +125,49 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
+set $ws13 "13"
 
-set $ws_mail "11 M"
-set $ws_password_manager "12 L"
-set $ws_messaging "13 D"
+# desktops for certain apps
+assign [class="Caprine"]                              → 8
+assign [class="TelegramDesktop"]                      → 9
+assign [class="Riot"]                                 → 10
+assign [class="Thunderbird"]                          → 11
+assign [title="KeePassXC(?!-Browser Confirm Access)"] → 12
+assign [class="discord"]                              → 13
 
-assign [class="Thunderbird"] → 11 M
-assign [class="KeePassXC"] → 12 L
-assign [class="discord"] → 13 D
+# switching
+bindsym $mod+1         workspace $ws1
+bindsym $mod+2         workspace $ws2
+bindsym $mod+3         workspace $ws3
+bindsym $mod+4         workspace $ws4
+bindsym $mod+5         workspace $ws5
+bindsym $mod+6         workspace $ws6
+bindsym $mod+7         workspace $ws7
+bindsym $mod+8         workspace $ws8
+bindsym $mod+9         workspace $ws9
+bindsym $mod+0         workspace $ws10
+bindsym $mod+minus     workspace $ws11
+bindsym $mod+equal     workspace $ws12
+bindsym $mod+BackSpace workspace $ws13
 
-# switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+# moving
+bindsym $mod+Shift+1         move container to workspace $ws1
+bindsym $mod+Shift+2         move container to workspace $ws2
+bindsym $mod+Shift+3         move container to workspace $ws3
+bindsym $mod+Shift+4         move container to workspace $ws4
+bindsym $mod+Shift+5         move container to workspace $ws5
+bindsym $mod+Shift+6         move container to workspace $ws6
+bindsym $mod+Shift+7         move container to workspace $ws7
+bindsym $mod+Shift+8         move container to workspace $ws8
+bindsym $mod+Shift+9         move container to workspace $ws9
+bindsym $mod+Shift+0         move container to workspace $ws10
+bindsym $mod+Shift+minus     move container to workspace $ws11
+bindsym $mod+Shift+equal     move container to workspace $ws12
+bindsym $mod+Shift+BackSpace move container to workspace $ws13
 
-bindsym $mod+minus workspace $ws_mail
-bindsym $mod+equal workspace $ws_password_manager
-bindsym $mod+BackSpace workspace $ws_messaging
-
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
-
-bindsym $mod+Shift+minus move container to workspace $ws_mail
-bindsym $mod+Shift+equal move container to workspace $ws_password_manager
-bindsym $mod+Shift+BackSpace move container to workspace $ws_messaging
-
-# for cycling the workspaces
+# cycling the workspaces
 bindsym $mod+Shift+Ctrl+l move workspace to output right
 bindsym $mod+Shift+Ctrl+h move workspace to output left
 
