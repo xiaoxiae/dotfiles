@@ -5,10 +5,7 @@ let mapleader=","   " change leader to , (easier to reach)
 
 
 " === VISUALS === "
-set termguicolors     " enable true colors support
-let ayucolor="light"  " for light version of theme
-colorscheme ayu
-
+colo badwolf  " color scheme
 syntax on     " syntax highlighting
 
 set cursorline  " highlight the current line
@@ -92,7 +89,6 @@ autocmd FileType cpp     map <F4> :w \| !cat ./%:r.in \| ./%:r<cr>
 
 autocmd FileType vimwiki map <F2> :w \| !md_to_pdf -f="%" -t=h; if test -e %:r.pdf; zathura %:r.pdf; end<cr>
 autocmd FileType vimwiki map <F3> :w \| !md_to_pdf -f="%" -t=h<cr>
-autocmd FileType vimwiki map <F4> :w \| !md_to_pdf -f="%"<cr>
 
 autocmd FileType tex     map <F3> :w \| !lualatex -shell-escape "%"<cr>
 autocmd FileType tex     map <F4> :w \| !bibtex "%:r"<cr>
@@ -114,6 +110,9 @@ autocmd FileType tex  setlocal tabstop=2 shiftwidth=2
 autocmd FileType html setlocal tabstop=2 shiftwidth=2
 autocmd FileType vimwiki  setlocal wrap
 autocmd FileType markdown setlocal ft=vimwiki
+
+" Python spell check and auto format
+autocmd FileType python  execute ':Spe'
 
 " unify tex flavors, since I really only work with LaTeX
 let g:tex_flavor = "latex"
@@ -157,3 +156,11 @@ let g:ale_lint_on_text_changed='never'
 let g:ale_lint_on_insert_leave='never'
 let g:ale_lint_on_enter='never'
 let g:ale_lint_on_filetype_changed='never'
+
+" gitgutter
+autocmd BufWritePost * GitGutter  " real-time updates
+
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+
