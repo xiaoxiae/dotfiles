@@ -77,7 +77,7 @@ nnoremap L :bprevious<CR>
 " === CUSTOM COMMANDS === "
 autocmd FileType python  map <F2> :w \| !py %<cr>
 
-autocmd FileType arduino map <F2> :w \| !arduino-cli compile --fqbn arduino:avr:uno .<cr>
+autocmd FileType arduino map <F2> :w \| !arduino-cli compile --fqbn arduino:avr:uno --warnings all .<cr>
 autocmd FileType arduino map <F3> :w \| !arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno .<cr>
 
 autocmd FileType c       map <F2> :w \| !gcc % -o %:r && ./%:r<cr>
