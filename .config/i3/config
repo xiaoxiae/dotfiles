@@ -50,6 +50,9 @@ exec --no-startup-id xfce4-clipman
 # use the ucw keyboard (on R-Alt) and swap esc with caps
 exec_always setxkbmap -layout "us,cz" -variant ",ucw" -option caps:swapescape grp:switch
 
+# always enable numlock
+exec_always --no-startup-id numlockx on
+
 
 ### PROGRAM LAUNCHING ###
 bindsym Mod1+x exec --no-startup-id xournalpp
