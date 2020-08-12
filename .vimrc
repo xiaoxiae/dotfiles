@@ -87,7 +87,7 @@ autocmd FileType c       map <F4> :w \| !cat ./%:r.in \| ./%:r<cr>
 autocmd FileType cpp     map <F3> :w \| !gcc % -o %:r<cr>
 autocmd FileType cpp     map <F4> :w \| !cat ./%:r.in \| ./%:r<cr>
 
-autocmd FileType vimwiki map <F2> :w \| !md_to_pdf -f="%" -t=h; if test -e %:r.pdf; zathura %:r.pdf; end<cr>
+autocmd FileType vimwiki map <F2> :w \| !md_to_pdf -f="%" -t=h; if test -e "%:r.pdf"; zathura "%:r.pdf"; end<cr>
 autocmd FileType vimwiki map <F3> :w \| !md_to_pdf -f="%" -t=h<cr>
 
 autocmd FileType tex     map <F3> :w \| !lualatex -shell-escape "%"<cr>
