@@ -42,7 +42,7 @@ exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
 
 ### PROGRAM STARTUP ###
 exec --no-startup-id dunst
-exec --no-startup-id discord
+exec --no-startup-id discord-canary
 exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id redshift-gtk
