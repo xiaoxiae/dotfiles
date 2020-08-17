@@ -115,6 +115,9 @@ autocmd FileType html setlocal tabstop=2 shiftwidth=2
 autocmd FileType vimwiki  setlocal wrap
 autocmd FileType markdown setlocal ft=vimwiki
 
+" Python spell check and auto format
+autocmd FileType python  execute ':Spe'
+
 " unify tex flavors, since I really only work with LaTeX
 let g:tex_flavor = "latex"
 
@@ -157,3 +160,11 @@ let g:ale_lint_on_text_changed='never'
 let g:ale_lint_on_insert_leave='never'
 let g:ale_lint_on_enter='never'
 let g:ale_lint_on_filetype_changed='never'
+
+" gitgutter
+autocmd BufWritePost * GitGutter  " real-time updates
+
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+

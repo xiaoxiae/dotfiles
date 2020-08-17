@@ -72,11 +72,11 @@ exec_always setxkbmap -layout "us,cz" -variant ",ucw" -option caps:swapescape gr
 ### PROGRAM LAUNCHING ###
 bindsym Mod1+x exec --no-startup-id xournalpp
 bindsym Mod1+f exec --no-startup-id firefox
-bindsym Mod1+w exec mate-terminal -x vim ~/Documents/Wiki/index.md
-bindsym Mod1+i exec mate-terminal -x vim ~/Documents/Wiki/Diary/diary.md
+bindsym Mod1+w exec mate-terminal --profile=`cat ~/.terminal_profile` -x vim ~/Documents/Wiki/index.md
+bindsym Mod1+i exec mate-terminal --profile=`cat ~/.terminal_profile` -x vim ~/Documents/Wiki/Diary/diary.md
 bindsym Mod1+m exec --no-startup-id thunderbird
 bindsym Mod1+a exec --no-startup-id anki -b ~/Documents/Anki
-bindsym $mod+Return exec mate-terminal
+bindsym $mod+Return exec mate-terminal --profile=`cat ~/.terminal_profile`
 
 
 ### OTHER ###
