@@ -42,7 +42,7 @@ exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
 
 ### PROGRAM STARTUP ###
 exec --no-startup-id dunst
-exec --no-startup-id discord
+exec --no-startup-id discord-canary
 exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id redshift-gtk
@@ -51,7 +51,7 @@ exec --no-startup-id telegram-desktop
 exec --no-startup-id protonmail-bridge --no-window
 exec --no-startup-id thunderbird
 exec --no-startup-id keepassxc
-exec --no-startup-id riot-desktop
+exec --no-startup-id element-desktop
 exec --no-startup-id caprine
 exec --no-startup-id xss-lock -- i3lock --blur=1 -e --indicator
 exec --no-startup-id fish -c ~/.config/fish/scripts/diary_watch.fish
@@ -132,7 +132,7 @@ set $ws13 "13"
 # desktops for certain apps
 assign [class="Caprine"]                              → 8
 assign [class="TelegramDesktop"]                      → 9
-assign [class="Riot"]                                 → 10
+assign [class="Element"]                                 → 10
 assign [class="Thunderbird"]                          → 11
 assign [title="KeePassXC(?!-Browser Confirm Access)"] → 12
 assign [class="discord"]                              → 13
