@@ -1,9 +1,4 @@
 function toggle_lecture
-	# toggle vimrc
-	mv ~/.vimrc ~/.vimrc_
-	mv ~/.vimrc_lecture ~/.vimrc
-	mv ~/.vimrc_ ~/.vimrc_lecture
-
 	# toggle terminal profile 
 	mv ~/.terminal_profile ~/.terminal_profile_
 	mv ~/.terminal_profile_lecture ~/.terminal_profile

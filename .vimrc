@@ -7,7 +7,12 @@ let mapleader=","   " change leader to , (easier to reach)
 " === VISUALS === "
 set termguicolors     " enable true colors support
 let ayucolor="light"  " for light version of theme
-colorscheme ayu
+
+if system('cat ~/.terminal_profile | tr -d \n') == "Default"
+	colorscheme badwolf
+else
+	colorscheme ayu
+endif
 
 syntax on     " syntax highlighting
 
