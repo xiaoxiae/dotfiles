@@ -5,12 +5,11 @@ let mapleader=","   " change leader to , (easier to reach)
 
 
 " === VISUALS === "
-set termguicolors     " enable true colors support
-let ayucolor="light"  " for light version of theme
-
 if system('cat ~/.terminal_profile | tr -d \n') == "Default"
 	colorscheme badwolf
 else
+	set termguicolors     " enable true colors support
+	let ayucolor="light"  " for light version of theme
 	colorscheme ayu
 endif
 
@@ -21,7 +20,7 @@ set nu          " line numbering
 
 set signcolumn=number  " merge sign column and line numbers
 
-set lazyredraw  " don't redraw when it it's necessary 
+set lazyredraw  " don't redraw when it it's necessary
 set timeoutlen=1000 ttimeoutlen=0  " no delay after exiting visual mode
 
 set colorcolumn=88  " ruler (inspired by Python's Black)
