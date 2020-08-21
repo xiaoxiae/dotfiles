@@ -34,8 +34,10 @@ exec feh --randomize --bg-fill ~/Pictures/Backgrounds/*
 ### PROGRAM STARTUP ###
 exec --no-startup-id dunst
 exec --no-startup-id discord-canary
+exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
 exec --no-startup-id redshift-gtk
+exec --no-startup-id blueman-applet
 exec --no-startup-id telegram-desktop
 exec --no-startup-id protonmail-bridge --no-window
 exec --no-startup-id thunderbird
