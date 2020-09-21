@@ -1,0 +1,8 @@
+set from = tomas@slama.dev
+set hostname = slama.dev
+
+set spoolfile = ~/Mail/DEV/INBOX
+set record = ~/Mail/DEV/Sent
+set trash = ~/Mail/DEV/Trash
+
+set sendmail = "msmtp -a dev"

@@ -1,0 +1,39 @@
+[general]
+accounts = KAM, DEV
+pythonfile = ~/.offlineimap.py
+
+[Account KAM]
+localrepository = kam-local
+remoterepository = kam-remote
+postsynchook = notmuch new
+
+[Repository kam-remote]
+type = IMAP
+remotehost = kam.mff.cuni.cz
+remoteport = 993
+remoteuser = tom
+remotepasseval = get_password("kam.mff.cuni.cz")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository kam-local]
+type = Maildir
+localfolders = ~/Mail/KAM
+
+[Account DEV]
+localrepository = dev-local
+remoterepository = dev-remote
+postsynchook = notmuch new
+
+[Repository dev-remote]
+type = IMAP
+remotehost = 127.0.0.1
+remoteport = 1143
+remoteuser = tomas.slama@protonmail.com
+remotepasseval = get_password("127.0.0.1")
+ssl = no
+starttls = yes
+folderfilter = lambda foldername: "All Mail" not in foldername
+
+[Repository dev-local]
+type = Maildir
+localfolders = ~/Mail/DEV
