@@ -14,3 +14,6 @@ set BROWSER /usr/bin/firefox
 set EDITOR /usr/bin/vim
 
 fish_ssh_agent
+
+# for neomutt
+export ESCDELAY=0
