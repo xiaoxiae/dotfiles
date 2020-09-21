@@ -1,0 +1,106 @@
+# Resoruces:
+# https://neomutt.org/guide/configuration
+# https://neomutt.org/man/neomuttrc
+
+source ~/.neomutt/account.dev
+source ~/.neomutt/account.kam
+
+mailboxes `cd ~/Mail/ && find * -mindepth 1 -maxdepth 1 -type d | sed -E 's/^(.+)/+"\0"/g' | paste -s -d " "`
+
+set realname = "Tomáš Sláma"
+set editor = "vim -c ':Spc'"
+
+set sendmail_wait = 0
+
+set edit_headers
+set text_flowed = yes
+set sort=threads				# Threading!
+set autoedit					# Jump straight to Vim
+set forward_quote				# include message in forwards
+set include						# include message in replies
+set markers = no				# Disables the `+` displayed at line wraps
+set mark_old = no				# Unread mail stay unread until read
+set mime_forward = yes			# attachments are forwarded with mail
+set wait_key = no				# mutt won't ask "press key to continue"
+set reverse_name				# reply as whomever it was to
+set forward_format = "Fwd: %s"	# format of subject when forwarding
+
+
+### FORMATTING ###
+set date_format="%y/%m/%d %H:%M"
+set index_format="%Z %?X?A& ? %D %-15.15F %s"
+
+### SIDEBAR ###
+set sidebar_visible
+set sidebar_format = "%B%?F? [%N]?%* %?S?%S?"
+set sidebar_width  = 30
+set mail_check_stats
+
+### COLORS ###
+# stolen from https://gist.github.com/Evidlo/e42222241c5f9a8f79a8ffd38a0acd2b
+set my_background = "color234"
+set my_gray = "color245"
+set my_magenta = "color198"
+set my_brightmagenta = "brightcolor198"
+set my_green = "color112"
+set my_brightgreen = "brightcolor112"
+set my_red = "color160"
+set my_darkgray = "color235"
+set my_tan = "color185"
+set my_blue = "color81"
+set my_lavender = "color141"
+
+color index $my_gray $my_background ".*"
+color index_date $my_magenta $my_background
+color index_subject white $my_background "~R"
+color index_subject brightwhite $my_background "~U"
+color index_author $my_green $my_background "~R"
+color index_author $my_brightgreen $my_background "~U"
+
+color normal white $my_background
+color error $my_red $my_background
+color tilde $my_darkgray $my_background
+color message white $my_background
+color markers $my_red white
+color attachment white $my_background
+color bold brightwhite $my_background
+color underline brightcolor81 $my_background
+color quoted $my_tan $my_background
+color quoted1 $my_blue $my_background
+color quoted2 $my_green $my_background
+color quoted3 $my_lavender $my_background
+color hdrdefault $my_gray $my_background
+color header brightwhite $my_background "^(Subject)"
+
+color search $my_lavender $my_background
+color status $my_gray $my_darkgray
+color indicator $my_background $my_tan
+color tree $my_tan $my_background
+
+### BINDINGS ###
+macro index 1 '<enter-command> source ~/.neomutt/account.dev <enter><change-folder>!<enter>'
+macro index 2 '<enter-command> source ~/.neomutt/account.kam <enter><change-folder>!<enter>'
+
+bind index g noop
+bind index G last-entry
+bind index gg first-entry
+
+bind index l display-message
+
+bind index,pager \Cu half-up
+bind index,pager \Cd half-down
+
+bind index,pager \ej sidebar-next
+bind index,pager \ek sidebar-prev
+bind index,pager \eo sidebar-open
+
+bind index,pager J next-unread
+bind index,pager K previous-unread
+
+bind index,pager r group-reply
+bind index R toggle-new
+
+bind index,pager N search-opposite
+
+bind pager j next-line
+bind pager k previous-line
