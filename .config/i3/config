@@ -61,7 +61,6 @@ bindsym Mod1+x exec --no-startup-id xournalpp
 bindsym Mod1+q exec --no-startup-id qutebrowser
 bindsym Mod1+w exec mate-terminal -x vim ~/Documents/Wiki/index.md
 bindsym Mod1+i exec mate-terminal -x vim ~/Documents/Wiki/Diary/diary.md
-bindsym Mod1+m exec --no-startup-id thunderbird
 bindsym $mod+Return exec mate-terminal
 
 
