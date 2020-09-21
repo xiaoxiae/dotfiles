@@ -1,4 +1,4 @@
-<configuration version="31">
+<configuration version="32">
     <folder id="pal4s-imuhn" label="Music" path="/aux/Music" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" introducedBy=""></device>
@@ -7,6 +7,7 @@
         <minDiskFree unit="%">1</minDiskFree>
         <versioning type="simple">
             <param key="keep" val="5"></param>
+            <cleanupIntervalS>3600</cleanupIntervalS>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -26,6 +27,9 @@
         <maxConcurrentWrites>0</maxConcurrentWrites>
         <disableFsync>false</disableFsync>
         <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+        <caseSensitiveFS>false</caseSensitiveFS>
+        <junctionsAsDirs>true</junctionsAsDirs>
     </folder>
     <folder id="wm3b2-hkzpb" label="Documents" path="/home/xiaoxiae/Documents" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -35,6 +39,7 @@
         <minDiskFree unit="%">1</minDiskFree>
         <versioning type="simple">
             <param key="keep" val="5"></param>
+            <cleanupIntervalS>3600</cleanupIntervalS>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -54,6 +59,9 @@
         <maxConcurrentWrites>0</maxConcurrentWrites>
         <disableFsync>false</disableFsync>
         <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+        <caseSensitiveFS>false</caseSensitiveFS>
+        <junctionsAsDirs>true</junctionsAsDirs>
     </folder>
     <folder id="x3xm9-hygrs" label="Pictures" path="/home/xiaoxiae/Pictures" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -62,6 +70,7 @@
         <minDiskFree unit="%">1</minDiskFree>
         <versioning type="simple">
             <param key="keep" val="5"></param>
+            <cleanupIntervalS>3600</cleanupIntervalS>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -81,6 +90,9 @@
         <maxConcurrentWrites>0</maxConcurrentWrites>
         <disableFsync>false</disableFsync>
         <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+        <caseSensitiveFS>false</caseSensitiveFS>
+        <junctionsAsDirs>true</junctionsAsDirs>
     </folder>
     <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" name="manjaro-thinkpad" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -97,6 +109,7 @@
         <autoAcceptFolders>false</autoAcceptFolders>
         <maxSendKbps>0</maxSendKbps>
         <maxRecvKbps>0</maxRecvKbps>
+        <ignoredFolder time="2020-09-05T21:23:24.769Z" id="2kyeb-nfdjt" label="Audiobooks"></ignoredFolder>
         <maxRequestKiB>0</maxRequestKiB>
     </device>
     <device id="6537O3K-K5BRZTU-36QGB5V-WMUXAQS-2JAKGNL-Z5QLJ5K-CEXUREV-U43YRAR" name="desktop-manjaro" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
