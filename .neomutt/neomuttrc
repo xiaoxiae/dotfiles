@@ -16,6 +16,7 @@ set header_cache_backend = gdbm
 set sendmail_wait = 0
 
 set edit_headers
+set delete						# Delete /essages immediately.
 set text_flowed = yes
 set sort=threads				# Threading!
 set autoedit					# Jump straight to Vim
@@ -33,7 +34,7 @@ set new_mail_command="dunstify Mail '%f: %n new message(s).'"
 
 ### FORMATTING ###
 set date_format="%y/%m/%d %H:%M"
-set index_format="%Z %?X?A& ? %D %-15.15F %s"
+set index_format="%Z%?X?A& ? %D %-15.15n %s"
 
 
 ### SIDEBAR ###
@@ -89,11 +90,14 @@ macro index,pager 1 '<enter-command> source ~/.neomutt/account.dev   <enter><cha
 macro index,pager 2 '<enter-command> source ~/.neomutt/account.gmail <enter><change-folder>!<enter>'
 macro index,pager 3 '<enter-command> source ~/.neomutt/account.kam   <enter><change-folder>!<enter>'
 
+macro index,pager <F5> "<shell-escape>~/.neomutt/update-mail.sh<enter>"
+
 bind index g noop
 bind index G last-entry
 bind index gg first-entry
 
 bind index l display-message
+bind index o display-message
 
 bind index,pager \Cu half-up
 bind index,pager \Cd half-down
@@ -101,6 +105,16 @@ bind index,pager \Cd half-down
 bind index,pager \ej sidebar-next
 bind index,pager \ek sidebar-prev
 bind index,pager \eo sidebar-open
+
+# marking messages
+bind index,pager u noop
+bind index,pager d noop
+bind index t noop
+macro index,pager f <search>flag<enter>
+bind index,pager U undelete-message
+macro index,pager D <delete-message><>
+bind index T tag-entry
+bind index,pager F flag-message
 
 bind index,pager J next-unread
 bind index,pager K previous-unread
@@ -112,3 +126,5 @@ bind index,pager N search-opposite
 
 bind pager j next-line
 bind pager k previous-line
+
+bind index,pager O noop
