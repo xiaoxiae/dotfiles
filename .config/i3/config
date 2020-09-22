@@ -43,7 +43,6 @@ exec --no-startup-id protonmail-bridge --no-window
 exec --no-startup-id mate-terminal --title=neomutt -x neomutt
 exec --no-startup-id keepassxc
 exec --no-startup-id element-desktop
-exec --no-startup-id caprine
 exec --no-startup-id fish -c ~/.config/fish/scripts/diary_watch.fish
 exec --no-startup-id xfce4-clipman
 
@@ -115,7 +114,6 @@ set $ws12 "12"
 set $ws13 "13"
 
 # desktops for certain apps
-assign [class="Caprine"]                              → 8
 assign [class="TelegramDesktop"]                      → 9
 assign [class="Element"]                              → 10
 assign [title="neomutt"]                              → 11
