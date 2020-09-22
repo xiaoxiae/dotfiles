@@ -5,5 +5,6 @@ set spoolfile = ~/Mail/KAM/INBOX
 set record = ~/Mail/KAM/Sent
 set trash = ~/Mail/KAM/Trash
 set postponed = ~/Mail/KAM/Drafts
+set header_cache = ~/Mail/KAM/Cache
 
 set sendmail = "msmtp -a kam"
