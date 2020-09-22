@@ -28,16 +28,20 @@ set wait_key = no				# mutt won't ask "press key to continue"
 set reverse_name				# reply as whomever it was to
 set forward_format = "Fwd: %s"	# format of subject when forwarding
 
+set new_mail_command="dunstify Mail '%f: %n new message(s).'"
+
 
 ### FORMATTING ###
 set date_format="%y/%m/%d %H:%M"
 set index_format="%Z %?X?A& ? %D %-15.15F %s"
 
+
 ### SIDEBAR ###
 set sidebar_visible
-set sidebar_format = "%B%?F? [%N]?%* %?S?%S?"
+set sidebar_format = "%B%?N? [%N]?%* %?S?%S?"
 set sidebar_width  = 30
 set mail_check_stats
+
 
 ### COLORS ###
 # stolen from https://gist.github.com/Evidlo/e42222241c5f9a8f79a8ffd38a0acd2b
