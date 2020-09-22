@@ -1,5 +1,5 @@
 [general]
-accounts = KAM, DEV
+accounts = DEV, Gmail, KAM
 pythonfile = ~/.offlineimap.py
 
 [Account KAM]
@@ -14,6 +14,7 @@ remoteport = 993
 remoteuser = tom
 remotepasseval = get_password("kam.mff.cuni.cz")
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda folder: not folder.startswith('Archives')
 
 [Repository kam-local]
 type = Maildir
@@ -37,3 +38,29 @@ folderfilter = lambda foldername: "All Mail" not in foldername
 [Repository dev-local]
 type = Maildir
 localfolders = ~/Mail/DEV
+
+[Account Gmail]
+localrepository = gmail-local
+remoterepository = gmail-remote
+postsynchook = notmuch new
+
+[Repository gmail-remote]
+type = Gmail
+remoteuser = tomas.slama.131@gmail.com
+remotepasseval = get_password("smtp.gmail.com")  # passwords for SMTP and gmail are the same
+
+folderfilter: lambda folder: folder in ["Junk", "INBOX", "[Gmail]/Koncepty", "[Gmail]/Ko&AWE-", "[Gmail]/Odeslan&AOE- po&AWE-ta"]
+
+nametrans: lambda folder: \
+	     "Trash"  if folder == "[Gmail]/Ko&AWE-" \
+	else "Drafts" if folder == "[Gmail]/Koncepty" \
+	else "Sent"   if folder == "[Gmail]/Odeslan&AOE- po&AWE-ta" \
+	else folder
+
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+# https://github.com/OfflineIMAP/offlineimap/issues/573
+ssl_version = tls1_2
+
+[Repository gmail-local]
+type = Maildir
+localfolders = ~/Mail/Gmail

@@ -3,6 +3,7 @@
 # https://neomutt.org/man/neomuttrc
 
 source ~/.neomutt/account.dev
+source ~/.neomutt/account.gmail
 source ~/.neomutt/account.kam
 
 mailboxes `cd ~/Mail/ && find * -mindepth 1 -maxdepth 1 -type d | sed -E 's/^(.+)/+"\0"/g' | paste -s -d " "`
@@ -78,8 +79,9 @@ color indicator $my_background $my_tan
 color tree $my_tan $my_background
 
 ### BINDINGS ###
-macro index 1 '<enter-command> source ~/.neomutt/account.dev <enter><change-folder>!<enter>'
-macro index 2 '<enter-command> source ~/.neomutt/account.kam <enter><change-folder>!<enter>'
+macro index,pager 1 '<enter-command> source ~/.neomutt/account.dev   <enter><change-folder>!<enter>'
+macro index,pager 2 '<enter-command> source ~/.neomutt/account.gmail <enter><change-folder>!<enter>'
+macro index,pager 3 '<enter-command> source ~/.neomutt/account.kam   <enter><change-folder>!<enter>'
 
 bind index g noop
 bind index G last-entry
