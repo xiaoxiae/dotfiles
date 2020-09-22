@@ -1,0 +1,10 @@
+set from = tomas.slama.131@gmail.com
+set hostname = gmail.com
+
+set spoolfile = ~/Mail/Gmail/INBOX
+set record = ~/Mail/Gmail/Sent
+set trash = ~/Mail/Gmail/Trash
+set postponed = ~/Mail/Gmail/Drafts
+set header_cache = ~/Mail/Gmail/Cache
+
+set sendmail = "msmtp -a gmail"

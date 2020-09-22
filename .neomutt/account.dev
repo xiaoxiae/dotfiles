@@ -4,5 +4,6 @@ set hostname = slama.dev
 set spoolfile = ~/Mail/DEV/INBOX
 set record = ~/Mail/DEV/Sent
 set trash = ~/Mail/DEV/Trash
+set header_cache = ~/Mail/DEV/Cache
 
 set sendmail = "msmtp -a dev"
