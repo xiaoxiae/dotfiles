@@ -98,9 +98,9 @@ color indicator $my_background $my_tan
 color tree $my_tan $my_background
 
 ### BINDINGS ###
-macro index,pager 1 '<enter-command> source ~/.neomutt/account.dev   <enter><change-folder>!<enter>'
-macro index,pager 2 '<enter-command> source ~/.neomutt/account.gmail <enter><change-folder>!<enter>'
-macro index,pager 3 '<enter-command> source ~/.neomutt/account.kam   <enter><change-folder>!<enter>'
+macro index,pager \e1 '<enter-command> source ~/.neomutt/account.dev   <enter><change-folder>!<enter>'
+macro index,pager \e2 '<enter-command> source ~/.neomutt/account.gmail <enter><change-folder>!<enter>'
+macro index,pager \e3 '<enter-command> source ~/.neomutt/account.kam   <enter><change-folder>!<enter>'
 
 macro index,pager <F5> "<shell-escape>~/.neomutt/update-mail.sh &<enter>"
 
