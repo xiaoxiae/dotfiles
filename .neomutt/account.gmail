@@ -1,5 +1,4 @@
 set from = tomas.slama.131@gmail.com
-set hostname = gmail.com
 
 set spoolfile = ~/Mail/Gmail/INBOX
 set record = ~/Mail/Gmail/Sent

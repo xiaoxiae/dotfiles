@@ -1,5 +1,4 @@
 set from = tom@kam.mff.cuni.cz
-set hostname = kam.mff.cuni.cz
 
 set spoolfile = ~/Mail/KAM/INBOX
 set record = ~/Mail/KAM/Sent

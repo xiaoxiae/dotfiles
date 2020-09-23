@@ -1,5 +1,4 @@
 set from = tomas@slama.dev
-set hostname = slama.dev
 
 set spoolfile = ~/Mail/DEV/INBOX
 set record = ~/Mail/DEV/Sent
