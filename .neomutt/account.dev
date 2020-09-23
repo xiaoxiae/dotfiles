@@ -3,6 +3,7 @@ set from = tomas@slama.dev
 set spoolfile = ~/Mail/DEV/INBOX
 set record = ~/Mail/DEV/Sent
 set trash = ~/Mail/DEV/Trash
+unset postponed
 set header_cache = ~/Mail/DEV/Cache
 
 set sendmail = "msmtp -a dev"
