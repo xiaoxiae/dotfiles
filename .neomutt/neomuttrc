@@ -15,23 +15,29 @@ set editor = "vim -c ':Spc'"
 set header_cache_backend = gdbm
 
 set sendmail_wait = 0			# wait until mail is sent
-set delete						# delete messages immediately.
-set edit_headers				# edit headers instead of prompts.
+set delete						# delete messages immediately
+set quit						# quit immediately
+set edit_headers				# edit headers instead of prompts
 set sort=threads				# threading!
 set autoedit					# jump straight to Vim
 set forward_quote				# include body of the message when forwarding
 set include						# include body of the message in reply
 set markers = no				# disables the `+` displayed at line wraps
 set mark_old = no				# unread mail stay unread until read
-set mime_forward = yes			# attachments are forwarded with mail
+set mime_forward				# attachments are forwarded with mail
 set wait_key = no				# mutt won't ask "press key to continue"
 set reverse_name				# reply as whomever it was to
 set forward_format = "Fwd: %s"	# format of subject when forwarding
 set sleep_time = 0				# don't wait for stuff
-set pager_stop = yes			# stop at the end of mail instead of going to next one
+set auto_tag					# apply actions to all tagged messages
 
-set new_mail_command="dunstify Mail '%f: %n new message(s).'"
+set pager_stop					# stop at the end of mail instead of going to next one
+set pager_index_lines = 7		# number of index lines to show
+set pager_context = 3			# number of context lines to show
+set tilde						# show tildes like in vim
 
+# only send notifications if there are not 0 unread emails
+set new_mail_command="test %n -ne 0 && dunstify Mail '%f: %n new message(s).' || :"
 
 # automatic attachment saving to downloads
 set attach_save_dir = ~/Downloads
@@ -101,6 +107,15 @@ color tree $my_tan $my_background
 macro index,pager \e1 '<enter-command> source ~/.neomutt/account.dev   <enter><change-folder>!<enter>'
 macro index,pager \e2 '<enter-command> source ~/.neomutt/account.gmail <enter><change-folder>!<enter>'
 macro index,pager \e3 '<enter-command> source ~/.neomutt/account.kam   <enter><change-folder>!<enter>'
+bind index,pager 1 noop
+bind index,pager 2 noop
+bind index,pager 3 noop
+bind index,pager 4 noop
+bind index,pager 5 noop
+bind index,pager 6 noop
+bind index,pager 7 noop
+bind index,pager 8 noop
+bind index,pager 9 noop
 
 macro index,pager <F5> "<shell-escape>~/.neomutt/update-mail.sh &<enter>"
 
@@ -110,6 +125,14 @@ bind attach,index G last-entry
 bind attach,index gg first-entry
 bind pager G bottom
 bind pager gg top
+
+# zz for centering stuff
+bind attach,index zz current-middle
+bind attach,index zt current-top
+bind attach,index zb current-bottom
+
+bind attach,index y noop
+bind attach,index yy copy-message
 
 bind index l display-message
 bind index o display-message
@@ -122,7 +145,8 @@ bind index,pager \ek sidebar-prev
 bind index,pager \eo sidebar-open
 
 # marking messages
-# D/U: delete + read/undelete
+# D: read and delete
+# U: undelete
 # F: toggle flag
 # f: look for flag
 bind index,pager u noop
@@ -130,7 +154,7 @@ bind index,pager d noop
 bind index t noop
 macro index,pager f <search>flag<enter>
 bind index,pager U undelete-message
-macro index,pager D <delete-message>
+macro index,pager D ":set confirmappend=no resolve=no\n<clear-flag>N<tag-prefix><delete-message>:set confirmappend=yes resolve=yes\n<next-undeleted>"
 bind index T tag-entry
 bind index,pager F flag-message
 
