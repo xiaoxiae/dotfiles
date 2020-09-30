@@ -152,7 +152,6 @@ bind index,pager \eo sidebar-open
 bind index,pager u noop
 bind index,pager d noop
 bind index t noop
-macro index,pager f <search>flag<enter>
 bind index,pager U undelete-message
 macro index,pager D ":set confirmappend=no resolve=no\n<clear-flag>N<tag-prefix><delete-message>:set confirmappend=yes resolve=yes\n<next-undeleted>"
 bind index T tag-entry
