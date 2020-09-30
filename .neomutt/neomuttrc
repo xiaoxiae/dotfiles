@@ -168,4 +168,8 @@ bind index,pager N search-opposite
 bind pager j next-line
 bind pager k previous-line
 
+# mouse
+bind pager <Up> previous-line
+bind pager <Down> next-line
+
 bind index,pager O noop
