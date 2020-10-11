@@ -55,7 +55,6 @@ exec --no-startup-id mate-terminal --title=neomutt -x neomutt
 exec --no-startup-id keepassxc
 exec --no-startup-id element-desktop
 exec --no-startup-id xss-lock -- i3lock --blur=1 -e --indicator
-exec --no-startup-id fish -c ~/.config/fish/scripts/diary_watch.fish
 exec --no-startup-id xfce4-clipman
 
 
@@ -73,8 +72,8 @@ exec_always setxkbmap -layout "us,cz" -variant ",ucw" -option caps:swapescape gr
 ### PROGRAM LAUNCHING ###
 bindsym Mod1+x exec --no-startup-id xournalpp
 bindsym Mod1+q exec --no-startup-id qutebrowser
-bindsym Mod1+w exec mate-terminal --profile=`cat ~/.terminal_profile` -x vim ~/Documents/Wiki/index.md
-bindsym Mod1+i exec mate-terminal --profile=`cat ~/.terminal_profile` -x vim ~/Documents/Wiki/Diary/diary.md
+bindsym Mod1+w exec mate-terminal --profile=`cat ~/.terminal_profile` -x vim ~/Documents/Wiki/wiki.md
+bindsym Mod1+i exec mate-terminal --profile=`cat ~/.terminal_profile` -x vim ~/Documents/Wiki/diary/diary.md
 bindsym $mod+Return exec mate-terminal --profile=`cat ~/.terminal_profile`
 
 
