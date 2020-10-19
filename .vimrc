@@ -75,8 +75,6 @@ nnoremap L :bprevious<CR>
 
 
 " === CUSTOM COMMANDS === "
-map <F2> :Autoformat<cr>
-
 autocmd FileType python  map <F3> :w \| !py %<cr>
 
 autocmd FileType arduino map <F3> :w \| !arduino-cli compile --fqbn arduino:avr:uno --warnings all<cr>
@@ -166,7 +164,7 @@ highlight GitGutterChange guifg=#bbbb00 ctermfg=3
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
 " format
-map! <F1> :Autoformat
+map <F2> :Autoformat<cr>
 
 " Haskell
 let g:formatdef_my_haskell = '"ormolu"'
