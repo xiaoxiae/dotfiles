@@ -118,7 +118,7 @@ autocmd FileType vimwiki  setlocal wrap
 autocmd FileType markdown setlocal ft=vimwiki
 
 " Python spell check and auto format
-autocmd FileType python  execute ':Spe'
+autocmd FileType python execute ':Spe'
 
 " unify tex flavors, since I really only work with LaTeX
 let g:tex_flavor = "latex"
@@ -144,7 +144,7 @@ hi SpellBad cterm=underline
 
 " === PLUGINS === "
 " vimwiki
-let g:vimwiki_list = [{'path': '~/Documents/Wiki/', 'diary_rel_path': 'Diary/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/Documents/Wiki/', 'diary_rel_path': 'diary/', 'syntax': 'markdown', 'ext': '.md'}]
 
 let g:vimwiki_table_mappings = 0  " disable tab mappings in insert mode 
 let g:vimwiki_global_ext = 0      " don't use vimwiki format for other md files
