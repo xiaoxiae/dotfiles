@@ -21,12 +21,21 @@ snippet main "A basic cs file." b
 using System;
 
 static class Program {
-	static void Main() {
-		$0
+	static void Main(string[] args) {
+		${0:${VISUAL}}
 	}
 }
 endsnippet
 
 snippet p
 Console.WriteLine(${1:${VISUAL}});$0
+endsnippet
+
+
+snippet try "try-except" b
+try {
+	${1:${VISUAL}}
+} catch (Exception e) {
+	$2
+}$0
 endsnippet
