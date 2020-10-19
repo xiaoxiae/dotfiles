@@ -82,33 +82,34 @@ nnoremap L :bprevious<CR>
 
 
 " === CUSTOM COMMANDS === "
-autocmd FileType python  map <F2> :w \| !py %<cr>
+map <F2> :Autoformat<cr>
 
-autocmd FileType arduino map <F2> :w \| !arduino-cli compile --fqbn arduino:avr:uno --warnings all<cr>
-autocmd FileType arduino map <F3> :w \| !arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno<cr>
+autocmd FileType python  map <F3> :w \| !py %<cr>
 
-autocmd FileType c,cpp   map <F2> :w \| !gcc % -o %:r && ./%:r<cr>
-autocmd FileType c,cpp   map <F3> :w \| !gcc % -o %:r<cr>
+autocmd FileType arduino map <F3> :w \| !arduino-cli compile --fqbn arduino:avr:uno --warnings all<cr>
+autocmd FileType arduino map <F4> :w \| !arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno<cr>
 
-autocmd FileType haskell map <F2> :w \| !ghc % -o %:r && ./%:r<cr>
-autocmd FileType haskell map <F3> :w \| !ghc % -o %:r<cr>
+autocmd FileType c,cpp   map <F3> :w \| !gcc % -o %:r && ./%:r<cr>
+autocmd FileType c,cpp   map <F4> :w \| !gcc % -o %:r<cr>
 
-autocmd FileType vimwiki map <F2> :w \| !md_to_pdf -f="%" -t=h; if test -e "%:r.pdf"; zathura "%:r.pdf"; end<cr>
-autocmd FileType vimwiki map <F3> :w \| !md_to_pdf -f="%" -t=h<cr>
-autocmd FileType vimwiki map <F4> :w \| !md_to_pdf -f="%"<cr>
+autocmd FileType haskell map <F3> :w \| !ghc -dynamic -threaded % -o %:r && ./%:r<cr>
+autocmd FileType haskell map <F4> :w \| !ghc -dynamic -threaded % -o %:r<cr>
+
+autocmd FileType vimwiki map <F3> :w \| !md_to_pdf -f="%" -t=h; if test -e "%:r.pdf"; zathura "%:r.pdf" &; end<cr>
+autocmd FileType vimwiki map <F4> :w \| !md_to_pdf -f="%" -t=h<cr>
 
 autocmd FileType tex     map <F3> :w \| !lualatex -shell-escape "%"<cr>
-autocmd FileType tex     map <F4> :w \| !bibtex "%:r"<cr>
 
-autocmd FileType sh      map <F2> :w \| !./%<cr>
-autocmd FileType sh      map <F3> :w \| !bash %<cr>
-autocmd FileType conf    map <F2> :w \| !fish %<cr>
+autocmd FileType sh      map <F3> :w \| !./%<cr>
+autocmd FileType sh      map <F4> :w \| !bash %<cr>
+autocmd FileType conf    map <F3> :w \| !fish %<cr>
 
-autocmd FileType cpp     map <F2> :w \| !g++ % -o %:r && ./%:r<cr>
-autocmd FileType cpp     map <F3> :w \| !g++ % -o %:r<cr>
+autocmd FileType cpp     map <F3> :w \| !g++ % -o %:r && ./%:r<cr>
+autocmd FileType cpp     map <F4> :w \| !g++ % -o %:r<cr>
 
-autocmd FileType cs      map <F2> :w \| !csc % && mono %:r.exe<cr>
-autocmd FileType cs      map <F3> :w \| !csc % %<cr>
+autocmd FileType cs      map <F3> :w \| !csc % && mono %:r.exe<cr>
+autocmd FileType cs      map <F4> :w \| !csc % %<cr>
+
 
 
 " === FILETYPE-SPECIFIC BEHAVIOR === "
@@ -171,3 +172,19 @@ highlight GitGutterAdd    guifg=#009900 ctermfg=2
 highlight GitGutterChange guifg=#bbbb00 ctermfg=3
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
+" format
+map! <F1> :Autoformat
+
+" Haskell
+let g:formatdef_my_haskell = '"ormolu"'
+let g:formatters_haskell = ['my_haskell']
+
+" C, C++, C#
+let g:formatdef_my_c = '"clang-format --assume-filename=.c --style=\\{BasedOnStyle:\\ google\\,\\ IndentWidth:\\ 4\\}"'
+let g:formatters_c = ['my_c']
+
+let g:formatdef_my_cpp = '"clang-format --assume-filename=.cpp --style=\\{BasedOnStyle:\\ google\\,\\ IndentWidth:\\ 4\\}"'
+let g:formatters_cpp = ['my_cpp']
+
+let g:formatdef_my_cs = '"clang-format --assume-filename=.cs --style=\\{BasedOnStyle:\\ google\\,\\ IndentWidth:\\ 4\\}"'
+let g:formatters_cs = ['my_cs']
