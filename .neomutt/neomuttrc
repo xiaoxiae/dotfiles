@@ -165,6 +165,8 @@ bind index R toggle-new
 
 bind index,pager N search-opposite
 
+bind index,pager e resend-message
+
 bind pager j next-line
 bind pager k previous-line
 
