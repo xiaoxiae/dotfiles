@@ -2,7 +2,7 @@ set fish_greeting
 
 # prevent nested ranger instances
 # https://wiki.archlinux.org/index.php/Ranger
-function ranger
+function r
 	if [ -z "$RANGER_LEVEL" ]
 		/usr/bin/ranger "$argv"
 	else
@@ -10,7 +10,7 @@ function ranger
 	end
 end
 
-set BROWSER /usr/bin/firefox
+set BROWSER /usr/bin/qutebrowser
 set EDITOR /usr/bin/vim
 
 fish_ssh_agent
