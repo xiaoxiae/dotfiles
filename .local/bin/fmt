@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+/bin/fmt -w 80 $args
