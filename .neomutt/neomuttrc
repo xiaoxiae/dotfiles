@@ -117,6 +117,13 @@ bind index,pager 7 noop
 bind index,pager 8 noop
 bind index,pager 9 noop
 
+macro index <F8> \
+"<enter-command>set my_old_pipe_decode=\$pipe_decode my_old_wait_key=\$wait_key nopipe_decode nowait_key<enter>\
+<shell-escape>notmuch-mutt -r --prompt search<enter>\
+<change-folder-readonly>`echo ${XDG_CACHE_HOME:-$HOME/.cache}/notmuch/mutt/results`<enter>\
+<enter-command>set pipe_decode=\$my_old_pipe_decode wait_key=\$my_old_wait_key<enter>" \
+"notmuch: search mail"
+
 macro index,pager <F5> "<shell-escape>~/.neomutt/update-mail.sh &<enter>"
 
 # gg and G for top/down
