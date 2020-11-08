@@ -12,6 +12,7 @@ order += "battery all"
 order += "volume master"
 order += "read_file brightness"
 order += "disk /"
+order += "disk /home/"
 order += "disk /aux/"
 order += "wireless _first_"
 order += "ethernet _first_"
@@ -35,8 +36,13 @@ disk "/" {
 	prefix_type = decimal
 }
 
+disk "/home/" {
+	format = "/home/ %avail"
+	prefix_type = decimal
+}
+
 disk "/aux/" {
-	format = "/aux %avail"
+	format = "/aux/ %avail"
 	prefix_type = decimal
 }
 
