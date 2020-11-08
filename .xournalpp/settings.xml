@@ -4,17 +4,17 @@
   <property name="pressureSensitivity" value="true"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Portrait"/>
-  <property name="lastSavePath" value=""/>
+  <property name="lastSavePath" value="/home/xiaoxiae/Documents/Education/School/MatFyz/Studium/Skripty/school/courses/Algebra 1 (ALG)/cvičení/homework"/>
   <property name="lastOpenPath" value=""/>
   <property name="lastImagePath" value=""/>
   <property name="zoomStep" value="10.00000000"/>
-  <property name="zoomStepScroll" value="2.00000000"/>
+  <property name="zoomStepScroll" value="10.00000000"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="1360"/>
-  <property name="mainWndHeight" value="740"/>
+  <property name="mainWndWidth" value="1914"/>
+  <property name="mainWndHeight" value="1049"/>
   <property name="maximized" value="false"/>
-  <property name="showSidebar" value="false"/>
-  <property name="sidebarWidth" value="50"/>
+  <property name="showSidebar" value="true"/>
+  <property name="sidebarWidth" value="148"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
   <property name="menubarVisible" value="true"/>
@@ -76,7 +76,7 @@
   <property name="experimentalInputSystemEnabled" value="false"/>
   <property name="inputSystemTPCButton" value="false"/>
   <property name="inputSystemDrawOutsideWindow" value="true"/>
-  <property name="font" font="Sans" size="12.00000000"/>
+  <property name="font" font="Sans" size="5.00000000"/>
   <data name="buttonConfig">
     <data name="default">
       <attribute name="color" type="hex" value="ff000000"/>
@@ -91,7 +91,7 @@
       <attribute name="tool" type="string" value="selectRegion"/>
     </data>
     <data name="right">
-      <attribute name="tool" type="string" value="none"/>
+      <attribute name="tool" type="string" value="hand"/>
     </data>
     <data name="stylus">
       <attribute name="eraserMode" type="string" value="none"/>
@@ -99,7 +99,7 @@
       <attribute name="tool" type="string" value="eraser"/>
     </data>
     <data name="stylus2">
-      <attribute name="tool" type="string" value="none"/>
+      <attribute name="tool" type="string" value="selectRegion"/>
     </data>
     <data name="touch">
       <attribute name="device" type="string" value=""/>
@@ -108,6 +108,14 @@
     </data>
   </data>
   <data name="deviceClasses">
+    <data name="Lenovo USB Receiver">
+      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceSource" type="int" value="0"/>
+    </data>
+    <data name="Lenovo USB Receiver Consumer Control">
+      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceSource" type="int" value="0"/>
+    </data>
     <data name="SynPS/2 Synaptics TouchPad">
       <attribute name="deviceClass" type="int" value="1"/>
       <attribute name="deviceSource" type="int" value="6"/>
@@ -121,6 +129,30 @@
       <attribute name="deviceSource" type="int" value="2"/>
     </data>
     <data name="Wacom HID 50BF Pen stylus">
+      <attribute name="deviceClass" type="int" value="2"/>
+      <attribute name="deviceSource" type="int" value="1"/>
+    </data>
+    <data name="Wacom Intuos BT S Pad">
+      <attribute name="deviceClass" type="int" value="0"/>
+      <attribute name="deviceSource" type="int" value="8"/>
+    </data>
+    <data name="Wacom Intuos BT S Pad pad">
+      <attribute name="deviceClass" type="int" value="0"/>
+      <attribute name="deviceSource" type="int" value="8"/>
+    </data>
+    <data name="Wacom Intuos BT S Pen Pen (0x8816fec)">
+      <attribute name="deviceClass" type="int" value="2"/>
+      <attribute name="deviceSource" type="int" value="1"/>
+    </data>
+    <data name="Wacom Intuos BT S Pen cursor">
+      <attribute name="deviceClass" type="int" value="0"/>
+      <attribute name="deviceSource" type="int" value="3"/>
+    </data>
+    <data name="Wacom Intuos BT S Pen eraser">
+      <attribute name="deviceClass" type="int" value="3"/>
+      <attribute name="deviceSource" type="int" value="2"/>
+    </data>
+    <data name="Wacom Intuos BT S Pen stylus">
       <attribute name="deviceClass" type="int" value="2"/>
       <attribute name="deviceSource" type="int" value="1"/>
     </data>
@@ -148,17 +180,17 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="hilighter">
-      <attribute name="color" type="hex" value="ffff00"/>
-      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="color" type="hex" value="3333cc"/>
+      <attribute name="drawingType" type="string" value="line"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="size" type="string" value="THIN"/>
     </data>
     <data name="image">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="ff000000"/>
+      <attribute name="color" type="hex" value="000000"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
@@ -181,7 +213,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="text">
-      <attribute name="color" type="hex" value="000000"/>
+      <attribute name="color" type="hex" value="ff0000"/>
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="verticalSpace">
