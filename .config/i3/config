@@ -195,5 +195,5 @@ bindsym $mod+r mode "resize"
 bar {
     status_command i3status
 	separator_symbol "|"
-	font pango:DejaVu Sans Mono, Awesome 10
+	font pango:DejaVu Sans Mono, Awesome 13
 }
