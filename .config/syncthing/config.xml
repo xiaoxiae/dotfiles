@@ -1,12 +1,15 @@
 <configuration version="32">
     <folder id="pal4s-imuhn" label="Music" path="/home/xiaoxiae/Music" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" introducedBy=""></device>
-        <device id="ZINGTKY-GZREICB-HOMVALX-YWHHYJD-4KNXC7A-5XHETWS-5PWNYCK-J4SDTQC" introducedBy=""></device>
-        <device id="6537O3K-K5BRZTU-36QGB5V-WMUXAQS-2JAKGNL-Z5QLJ5K-CEXUREV-U43YRAR" introducedBy=""></device>
+        <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <device id="6537O3K-K5BRZTU-36QGB5V-WMUXAQS-2JAKGNL-Z5QLJ5K-CEXUREV-U43YRAR" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
-            <cleanupIntervalS>3600</cleanupIntervalS>
+            <cleanupIntervalS>0</cleanupIntervalS>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -23,22 +26,24 @@
         <markerName>.stfolder</markerName>
         <copyOwnershipFromParent>false</copyOwnershipFromParent>
         <modTimeWindowS>0</modTimeWindowS>
-        <maxConcurrentWrites>0</maxConcurrentWrites>
+        <maxConcurrentWrites>2</maxConcurrentWrites>
         <disableFsync>false</disableFsync>
         <blockPullOrder>standard</blockPullOrder>
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
-        <junctionsAsDirs>true</junctionsAsDirs>
+        <junctionsAsDirs>false</junctionsAsDirs>
     </folder>
     <folder id="wm3b2-hkzpb" label="Documents" path="/home/xiaoxiae/Documents" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" introducedBy=""></device>
-        <device id="ZINGTKY-GZREICB-HOMVALX-YWHHYJD-4KNXC7A-5XHETWS-5PWNYCK-J4SDTQC" introducedBy=""></device>
-        <device id="6537O3K-K5BRZTU-36QGB5V-WMUXAQS-2JAKGNL-Z5QLJ5K-CEXUREV-U43YRAR" introducedBy=""></device>
+        <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <device id="6537O3K-K5BRZTU-36QGB5V-WMUXAQS-2JAKGNL-Z5QLJ5K-CEXUREV-U43YRAR" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <minDiskFree unit="%">1</minDiskFree>
-        <versioning type="simple">
-            <param key="keep" val="5"></param>
-            <cleanupIntervalS>3600</cleanupIntervalS>
+        <versioning>
+            <cleanupIntervalS>0</cleanupIntervalS>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -55,20 +60,24 @@
         <markerName>.stfolder</markerName>
         <copyOwnershipFromParent>false</copyOwnershipFromParent>
         <modTimeWindowS>0</modTimeWindowS>
-        <maxConcurrentWrites>0</maxConcurrentWrites>
+        <maxConcurrentWrites>2</maxConcurrentWrites>
         <disableFsync>false</disableFsync>
         <blockPullOrder>standard</blockPullOrder>
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
-        <junctionsAsDirs>true</junctionsAsDirs>
+        <junctionsAsDirs>false</junctionsAsDirs>
     </folder>
     <folder id="x3xm9-hygrs" label="Pictures" path="/home/xiaoxiae/Pictures" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" introducedBy=""></device>
-        <device id="6537O3K-K5BRZTU-36QGB5V-WMUXAQS-2JAKGNL-Z5QLJ5K-CEXUREV-U43YRAR" introducedBy=""></device>
+        <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <device id="6537O3K-K5BRZTU-36QGB5V-WMUXAQS-2JAKGNL-Z5QLJ5K-CEXUREV-U43YRAR" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
-            <cleanupIntervalS>3600</cleanupIntervalS>
+            <cleanupIntervalS>0</cleanupIntervalS>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -85,29 +94,30 @@
         <markerName>.stfolder</markerName>
         <copyOwnershipFromParent>false</copyOwnershipFromParent>
         <modTimeWindowS>0</modTimeWindowS>
-        <maxConcurrentWrites>0</maxConcurrentWrites>
+        <maxConcurrentWrites>2</maxConcurrentWrites>
         <disableFsync>false</disableFsync>
         <blockPullOrder>standard</blockPullOrder>
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
-        <junctionsAsDirs>true</junctionsAsDirs>
+        <junctionsAsDirs>false</junctionsAsDirs>
     </folder>
-    <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" name="manjaro-thinkpad" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <device id="EVNF2CY-RU662D2-JHBFQG2-AH746RY-7EPMS2I-KIWIHMY-WJFYYN5-RHLQGQH" name="SM-G920F" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
         <maxSendKbps>0</maxSendKbps>
         <maxRecvKbps>0</maxRecvKbps>
         <maxRequestKiB>0</maxRequestKiB>
+        <untrusted>false</untrusted>
     </device>
-    <device id="ZINGTKY-GZREICB-HOMVALX-YWHHYJD-4KNXC7A-5XHETWS-5PWNYCK-J4SDTQC" name="SM-N960F" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" name="manjaro-carbon" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
         <maxSendKbps>0</maxSendKbps>
         <maxRecvKbps>0</maxRecvKbps>
-        <ignoredFolder time="2020-09-21T12:08:52.87Z" id="2kyeb-nfdjt" label="Audiobooks"></ignoredFolder>
         <maxRequestKiB>0</maxRequestKiB>
+        <untrusted>false</untrusted>
     </device>
     <device id="6537O3K-K5BRZTU-36QGB5V-WMUXAQS-2JAKGNL-Z5QLJ5K-CEXUREV-U43YRAR" name="desktop-manjaro" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -115,17 +125,19 @@
         <autoAcceptFolders>false</autoAcceptFolders>
         <maxSendKbps>0</maxSendKbps>
         <maxRecvKbps>0</maxRecvKbps>
-        <ignoredFolder time="2020-08-26T16:57:59.443Z" id="m9sow-pmqfr" label="Games"></ignoredFolder>
         <maxRequestKiB>0</maxRequestKiB>
+        <untrusted>false</untrusted>
     </device>
     <gui enabled="true" tls="false" debugging="false">
         <address>127.0.0.1:8384</address>
-        <apikey>9LVnfDaxwDtanPFXiN99rZzftkPrJ6b7</apikey>
+        <apikey>iGWbLmTmpMNe3QE6tnLuEdUvq2U5GykS</apikey>
         <theme>default</theme>
     </gui>
     <ldap></ldap>
     <options>
-        <listenAddress>default</listenAddress>
+        <listenAddress>tcp://0.0.0.0:42151</listenAddress>
+        <listenAddress>dynamic+https://relays.syncthing.net/endpoint</listenAddress>
+        <listenAddress>quic://0.0.0.0:42151</listenAddress>
         <globalAnnounceServer>default</globalAnnounceServer>
         <globalAnnounceEnabled>true</globalAnnounceEnabled>
         <localAnnounceEnabled>true</localAnnounceEnabled>
@@ -143,7 +155,7 @@
         <natTimeoutSeconds>10</natTimeoutSeconds>
         <urAccepted>3</urAccepted>
         <urSeen>3</urSeen>
-        <urUniqueID>N3jreKTw</urUniqueID>
+        <urUniqueID>Pxx2NDK4</urUniqueID>
         <urURL>https://data.syncthing.net/newdata</urURL>
         <urPostInsecurely>false</urPostInsecurely>
         <urInitialDelayS>1800</urInitialDelayS>
@@ -169,5 +181,7 @@
         <stunServer>default</stunServer>
         <databaseTuning>auto</databaseTuning>
         <maxConcurrentIncomingRequestKiB>0</maxConcurrentIncomingRequestKiB>
+        <announceLANAddresses>true</announceLANAddresses>
+        <sendFullIndexOnUpgrade>false</sendFullIndexOnUpgrade>
     </options>
 </configuration>
