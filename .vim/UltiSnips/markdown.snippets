@@ -1,28 +1,3 @@
-snippet l "link"
-[${VISUAL}]($1)$0
-endsnippet
-
-snippet bf "bold"
-**${1:${VISUAL}}**$0
-endsnippet
-
-snippet it "italics"
-_${1:${VISUAL}}_$0
-endsnippet
-
-snippet tw "typewriter"
-\`${1:${VISUAL}}\`$0
-endsnippet
-
-snippet dq "double czech quotes"
-„${1:${VISUAL}}“$0
-endsnippet
-
-snippet sq "single czech quotes"
-‚${1:${VISUAL}}‘$0
-endsnippet
-
-
 # LATEX
 snippet env "compact environment" w
 \begin{$1} ${2:${VISUAL}} \end{$1}$0
@@ -45,10 +20,6 @@ snippet i "item" b
 endsnippet
 
 # JEKYLL
-snippet xopp "xopp tag" w
-{% xopp ${1:${VISUAL}} %}$0
-endsnippet
-
 snippet lm "liquid math" w
 {% latex %}${1:${VISUAL}}{% endlatex %}$0
 endsnippet
@@ -59,18 +30,6 @@ endsnippet
 
 
 ## MATH
-snippet MA "display math" w
-\begin{align*}
-	${1:${VISUAL}}
-\end{align*}$0
-endsnippet
-
-snippet MG "display math" w
-\begin{gather*}
-	${1:${VISUAL}}
-\end{gather*}$0
-endsnippet
-
 snippet m "inline math"
 \$${1:${VISUAL}}\$$0
 endsnippet
@@ -115,8 +74,20 @@ snippet cal "math cal" w
 \mathcal{${1:${VISUAL}}}$0
 endsnippet
 
+snippet bf "math bf" w
+\mathbf{${1:${VISUAL}}}$0
+endsnippet
 
-### OVER/UNDERBRACKETS
+
+### OVER/UNDERSTUFF
+snippet _set "underset" w
+\underset{$2}{${1:${VISUAL}}}$0
+endsnippet
+
+snippet ^set "overset" w
+\overset{$2}{${1:${VISUAL}}}$0
+endsnippet
+
 snippet _{ "underbrace" w
 \underbrace{${1:${VISUAL}}}_{$2}$0
 endsnippet
@@ -133,7 +104,7 @@ snippet ^[ "underbracket" w
 \overbracket{${1:${VISUAL}}}^{$2}$0
 endsnippet
 
-### BRACKETS
+### SURROUND
 snippet () "round" i
 \left(${1:${VISUAL}}\right)$0
 endsnippet
@@ -144,6 +115,10 @@ endsnippet
 
 snippet {} "curly" i
 \left\\{${1:${VISUAL}}\right\\}$0
+endsnippet
+
+snippet <> "curly" i
+\langle ${1:${VISUAL}} \rangle$0
 endsnippet
 
 snippet abs "abs" i
@@ -157,6 +132,15 @@ endsnippet
 snippet ceil "ceil" i
 \left\lceil ${1:${VISUAL}} \right\rceil$0
 endsnippet
+
+snippet dq "double czech quotes"
+„${1:${VISUAL}}“$0
+endsnippet
+
+snippet sq "single czech quotes"
+‚${1:${VISUAL}}‘$0
+endsnippet
+
 
 ### OPERATORS
 snippet sqrt "sqrt" i
@@ -288,38 +272,53 @@ snippet c= "subset" w
 \subseteq
 endsnippet
 
+snippet =c "supset" w
+\supseteq
+endsnippet
+
 snippet \ "set minus" w
 \setminus
 endsnippet
 
 
 ### NUMBER SETS
-snippet R "real numbers" w
+snippet RR "real numbers" w
 \mathbb{R}
 endsnippet
 
-snippet N "natural numbers" w
+snippet NN "natural numbers" w
 \mathbb{N}
 endsnippet
 
-snippet C "complex numbers" w
+snippet CC "complex numbers" w
 \mathbb{C}
 endsnippet
 
-snippet Z "integral numbers" w
+snippet ZZ "integral numbers" w
 \mathbb{Z}
 endsnippet
 
-snippet Q "rational numbers" w
+snippet QQ "rational numbers" w
 \mathbb{Q}
 endsnippet
 
 
 ### OTHER NOTATION
-snippet O "O notation" w
+snippet OO "O notation" w
 \mathcal{O}
 endsnippet
 
-snippet E "expected value" w
+snippet EE "expected value" w
 \mathbb{E}
+endsnippet
+
+snippet PP "for P in KPR" w
+\mathcal{P}
+endsnippet
+
+
+### RANDOm
+snippet bye
+S pozdravem
+T. Sláma
 endsnippet
