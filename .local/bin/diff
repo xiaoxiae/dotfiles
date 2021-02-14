@@ -1,2 +1,2 @@
 #!/usr/bin/fish
-/bin/diff -u --color=always $argv
+/bin/diff --color=always $argv
