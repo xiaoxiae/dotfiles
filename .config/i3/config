@@ -36,7 +36,11 @@ exec --no-startup-id dunst
 exec --no-startup-id discord-canary
 exec --no-startup-id nm-applet
 exec --no-startup-id syncthing -no-browser
+
+# https://dev.to/lobo_tuerto/how-to-fix-redshift-in-manjaro-linux-i3-3i6k
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
+
 exec --no-startup-id blueman-applet
 exec --no-startup-id telegram-desktop
 exec --no-startup-id protonmail-bridge --no-window
