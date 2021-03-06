@@ -1,4 +1,4 @@
-<configuration version="32">
+<configuration version="33">
     <folder id="lrzfr-vklxc" label="School" path="/aux/School" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
@@ -35,7 +35,7 @@
     </folder>
     <folder id="pal4s-imuhn" label="Music" path="/aux/Music" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="EVNF2CY-RU662D2-JHBFQG2-AH746RY-7EPMS2I-KIWIHMY-WJFYYN5-RHLQGQH" introducedBy="">
+        <device id="GCFLHN3-Z3B6NTE-PP3P5TD-FPAMIUK-U5P5F2A-VFMOE2V-N3E5VRO-J32W5AE" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
         <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" introducedBy="">
@@ -77,7 +77,7 @@
     </folder>
     <folder id="wm3b2-hkzpb" label="Documents" path="/home/xiaoxiae/Documents" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="EVNF2CY-RU662D2-JHBFQG2-AH746RY-7EPMS2I-KIWIHMY-WJFYYN5-RHLQGQH" introducedBy="">
+        <device id="GCFLHN3-Z3B6NTE-PP3P5TD-FPAMIUK-U5P5F2A-VFMOE2V-N3E5VRO-J32W5AE" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
         <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" introducedBy="">
@@ -119,7 +119,7 @@
     </folder>
     <folder id="x3xm9-hygrs" label="Pictures" path="/home/xiaoxiae/Pictures" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="EVNF2CY-RU662D2-JHBFQG2-AH746RY-7EPMS2I-KIWIHMY-WJFYYN5-RHLQGQH" introducedBy="">
+        <device id="GCFLHN3-Z3B6NTE-PP3P5TD-FPAMIUK-U5P5F2A-VFMOE2V-N3E5VRO-J32W5AE" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
         <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" introducedBy="">
@@ -160,6 +160,17 @@
         <junctionsAsDirs>true</junctionsAsDirs>
     </folder>
     <device id="EVNF2CY-RU662D2-JHBFQG2-AH746RY-7EPMS2I-KIWIHMY-WJFYYN5-RHLQGQH" name="SM-G920F" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+        <autoAcceptFolders>false</autoAcceptFolders>
+        <maxSendKbps>0</maxSendKbps>
+        <maxRecvKbps>0</maxRecvKbps>
+        <ignoredFolder time="2021-02-23T22:52:24.253Z" id="wm3b2-hkzpb" label="Documents"></ignoredFolder>
+        <maxRequestKiB>0</maxRequestKiB>
+        <untrusted>false</untrusted>
+        <remoteGUIPort>0</remoteGUIPort>
+    </device>
+    <device id="GCFLHN3-Z3B6NTE-PP3P5TD-FPAMIUK-U5P5F2A-VFMOE2V-N3E5VRO-J32W5AE" name="ANE-LX1" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
@@ -253,5 +264,7 @@
         <maxConcurrentIncomingRequestKiB>0</maxConcurrentIncomingRequestKiB>
         <announceLANAddresses>true</announceLANAddresses>
         <sendFullIndexOnUpgrade>false</sendFullIndexOnUpgrade>
+        <connectionLimitEnough>0</connectionLimitEnough>
+        <connectionLimitMax>0</connectionLimitMax>
     </options>
 </configuration>
