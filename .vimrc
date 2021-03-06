@@ -3,7 +3,6 @@ set nocompatible  " settings for Vim, not Vi!
 set encoding=utf-8  " set encoding to UTF-8
 let mapleader=","   " change leader to , (easier to reach)
 
-
 " === VISUALS === "
 if system('cat ~/.terminal_profile | tr -d \n') == "Default"
 	colorscheme badwolf
