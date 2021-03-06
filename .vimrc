@@ -3,7 +3,6 @@ set nocompatible  " settings for Vim, not Vi!
 set encoding=utf-8  " set encoding to UTF-8
 let mapleader=","   " change leader to , (easier to reach)
 
-
 " === VISUALS === "
 colo badwolf  " color scheme
 syntax on     " syntax highlighting
