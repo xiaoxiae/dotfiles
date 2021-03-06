@@ -1,6 +1,43 @@
-<configuration version="32">
+<configuration version="33">
+    <folder id="lrzfr-vklxc" label="School" path="/aux/School" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <device id="6537O3K-K5BRZTU-36QGB5V-WMUXAQS-2JAKGNL-Z5QLJ5K-CEXUREV-U43YRAR" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning>
+            <cleanupIntervalS>0</cleanupIntervalS>
+        </versioning>
+        <copiers>0</copiers>
+        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
+        <modTimeWindowS>0</modTimeWindowS>
+        <maxConcurrentWrites>2</maxConcurrentWrites>
+        <disableFsync>false</disableFsync>
+        <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+        <caseSensitiveFS>false</caseSensitiveFS>
+        <junctionsAsDirs>false</junctionsAsDirs>
+    </folder>
     <folder id="pal4s-imuhn" label="Music" path="/home/xiaoxiae/Music" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="GCFLHN3-Z3B6NTE-PP3P5TD-FPAMIUK-U5P5F2A-VFMOE2V-N3E5VRO-J32W5AE" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -35,6 +72,9 @@
     </folder>
     <folder id="wm3b2-hkzpb" label="Documents" path="/home/xiaoxiae/Documents" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="GCFLHN3-Z3B6NTE-PP3P5TD-FPAMIUK-U5P5F2A-VFMOE2V-N3E5VRO-J32W5AE" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -69,6 +109,9 @@
     </folder>
     <folder id="x3xm9-hygrs" label="Pictures" path="/home/xiaoxiae/Pictures" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="GCFLHN3-Z3B6NTE-PP3P5TD-FPAMIUK-U5P5F2A-VFMOE2V-N3E5VRO-J32W5AE" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -109,6 +152,17 @@
         <maxRecvKbps>0</maxRecvKbps>
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
+        <remoteGUIPort>0</remoteGUIPort>
+    </device>
+    <device id="GCFLHN3-Z3B6NTE-PP3P5TD-FPAMIUK-U5P5F2A-VFMOE2V-N3E5VRO-J32W5AE" name="ANE-LX1" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+        <autoAcceptFolders>false</autoAcceptFolders>
+        <maxSendKbps>0</maxSendKbps>
+        <maxRecvKbps>0</maxRecvKbps>
+        <maxRequestKiB>0</maxRequestKiB>
+        <untrusted>false</untrusted>
+        <remoteGUIPort>0</remoteGUIPort>
     </device>
     <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" name="manjaro-carbon" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -118,6 +172,7 @@
         <maxRecvKbps>0</maxRecvKbps>
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
+        <remoteGUIPort>0</remoteGUIPort>
     </device>
     <device id="6537O3K-K5BRZTU-36QGB5V-WMUXAQS-2JAKGNL-Z5QLJ5K-CEXUREV-U43YRAR" name="desktop-manjaro" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -127,6 +182,7 @@
         <maxRecvKbps>0</maxRecvKbps>
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
+        <remoteGUIPort>0</remoteGUIPort>
     </device>
     <gui enabled="true" tls="false" debugging="false">
         <address>127.0.0.1:8384</address>
@@ -183,5 +239,7 @@
         <maxConcurrentIncomingRequestKiB>0</maxConcurrentIncomingRequestKiB>
         <announceLANAddresses>true</announceLANAddresses>
         <sendFullIndexOnUpgrade>false</sendFullIndexOnUpgrade>
+        <connectionLimitEnough>0</connectionLimitEnough>
+        <connectionLimitMax>0</connectionLimitMax>
     </options>
 </configuration>

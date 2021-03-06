@@ -4,14 +4,14 @@
   <property name="pressureSensitivity" value="true"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Portrait"/>
-  <property name="lastSavePath" value="/home/xiaoxiae/Documents/Education/School/MatFyz/Studium/Skripty/school/courses/Algebra 1 (ALG)/cvičení/homework"/>
+  <property name="lastSavePath" value="file:///home/xiaoxiae/Documents/Education/School/MatFyz/Studium/Skripty/school/courses/V%C3%BDrokov%C3%A1%20a%20predik%C3%A1tov%C3%A1%20logika%20(PPL)/p%C5%99edn%C3%A1%C5%A1ka/zkou%C5%A1ka"/>
   <property name="lastOpenPath" value=""/>
   <property name="lastImagePath" value=""/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="10.00000000"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="1914"/>
-  <property name="mainWndHeight" value="1049"/>
+  <property name="mainWndWidth" value="1920"/>
+  <property name="mainWndHeight" value="1080"/>
   <property name="maximized" value="false"/>
   <property name="showSidebar" value="true"/>
   <property name="sidebarWidth" value="148"/>
