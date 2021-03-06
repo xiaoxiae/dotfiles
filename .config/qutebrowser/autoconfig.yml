@@ -12,7 +12,7 @@ settings:
         <Ctrl+->: zoom-out
         <Ctrl+Shift++>: zoom-in
         d: devtools right
+  colors.webpage.darkmode.policy.page:
+    global: smart
   colors.webpage.prefers_color_scheme_dark:
     global: true
-  content.notifications:
-    https://thepiratebay.org: false
