@@ -86,11 +86,8 @@ autocmd FileType python  map <F3> :w \| !py %<cr>
 autocmd FileType arduino map <F3> :w \| !arduino-cli compile --fqbn arduino:avr:uno --warnings all<cr>
 autocmd FileType arduino map <F4> :w \| !arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno<cr>
 
-autocmd FileType c,cpp   map <F3> :w \| !gcc % -o %:r && ./%:r<cr>
-autocmd FileType c,cpp   map <F4> :w \| !gcc % -o %:r<cr>
-
-autocmd FileType haskell map <F3> :w \| !ghc -dynamic -threaded % -o %:r && ./%:r<cr>
-autocmd FileType haskell map <F4> :w \| !ghc -dynamic -threaded % -o %:r<cr>
+autocmd FileType c,cpp   map <F3> :w \| !gcc -Wall % -o %:r && ./%:r<cr>
+autocmd FileType c,cpp   map <F4> :w \| !gcc -Wall % -o %:r<cr>
 
 autocmd FileType vimwiki map <F3> :w \| !md_to_pdf -f="%" -t=h; if test -e "%:r.pdf"; zathura "%:r.pdf" &; end<cr>
 autocmd FileType vimwiki map <F4> :w \| !md_to_pdf -f="%" -t=h<cr>
@@ -185,3 +182,6 @@ let g:formatters_cpp = ['my_cpp']
 
 let g:formatdef_my_cs = '"clang-format --assume-filename=.cs --style=\\{BasedOnStyle:\\ google\\,\\ IndentWidth:\\ 4\\}"'
 let g:formatters_cs = ['my_cs']
+
+" Rainbow parentheses
+let g:rainbow_active = 1
