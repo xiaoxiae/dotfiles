@@ -5,6 +5,10 @@ set $mod Mod4
 
 
 ### CUSOM BINDINGS ###
+# control the volume keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
+
 # rofi run and drun
 bindsym $mod+p exec rofi -show drun -show-icons -theme Monokai
 bindsym $mod+d exec rofi -show run -theme Monokai
