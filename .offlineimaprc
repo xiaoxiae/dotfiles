@@ -33,7 +33,7 @@ remoteuser = tomas.slama@protonmail.com
 remotepasseval = get_password("127.0.0.1")
 ssl = no
 starttls = yes
-folderfilter = lambda foldername: "All Mail" not in foldername
+folderfilter = lambda foldername: all(f not in foldername for f in ["All Mail", "Labels"])
 
 [Repository dev-local]
 type = Maildir
