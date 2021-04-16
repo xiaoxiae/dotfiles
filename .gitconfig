@@ -9,7 +9,7 @@
 
 	# status commands
 	s = status
-	t = log --decorate --all --graph
+	t = log --decorate --all --graph --date=short
 	b = branch
 	
 	# The Holy Trinity
@@ -28,9 +28,6 @@
 
 	# stash
 	st = stash
-
-[log]
-	date = relative
 
 [format]
 	pretty = format:%C(yellow)%h%C(reset) | %C(cyan)%ad%C(reset) | %C(green)%aN%C(reset) |%C(red)%d%C(reset) %s
