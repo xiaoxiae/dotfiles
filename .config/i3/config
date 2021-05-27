@@ -54,6 +54,7 @@ exec --no-startup-id keepassxc
 exec --no-startup-id element-desktop
 exec --no-startup-id xfce4-clipman
 
+exec --no-startup-id /home/xiaoxiae/.screenlayout/main.sh
 
 ### KEYBOARD AND TOUCHSCREEN SETTINGS ###
 # use the ucw keyboard (on R-Alt) and swap esc with caps
