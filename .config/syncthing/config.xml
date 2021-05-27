@@ -1,4 +1,4 @@
-<configuration version="33">
+<configuration version="35">
     <folder id="lrzfr-vklxc" label="School" path="/aux/School" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
@@ -10,6 +10,8 @@
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
             <cleanupIntervalS>0</cleanupIntervalS>
+            <fsPath></fsPath>
+            <fsType>basic</fsType>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -38,9 +40,6 @@
         <device id="GCFLHN3-Z3B6NTE-PP3P5TD-FPAMIUK-U5P5F2A-VFMOE2V-N3E5VRO-J32W5AE" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
         <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -52,6 +51,8 @@
             <param key="cleanoutDays" val="0"></param>
             <param key="keep" val="5"></param>
             <cleanupIntervalS>3600</cleanupIntervalS>
+            <fsPath></fsPath>
+            <fsType>basic</fsType>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -80,9 +81,6 @@
         <device id="GCFLHN3-Z3B6NTE-PP3P5TD-FPAMIUK-U5P5F2A-VFMOE2V-N3E5VRO-J32W5AE" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
         <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -94,6 +92,8 @@
             <param key="cleanoutDays" val="0"></param>
             <param key="keep" val="5"></param>
             <cleanupIntervalS>3600</cleanupIntervalS>
+            <fsPath></fsPath>
+            <fsType>basic</fsType>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -122,9 +122,6 @@
         <device id="GCFLHN3-Z3B6NTE-PP3P5TD-FPAMIUK-U5P5F2A-VFMOE2V-N3E5VRO-J32W5AE" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
         <device id="335TPVI-IDSPQE4-BEGRLIU-KQ2QR2Z-7UJGKLX-BWVFLU2-DT4P3I6-YZ3TMAH" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -136,6 +133,8 @@
             <param key="cleanoutDays" val="0"></param>
             <param key="keep" val="5"></param>
             <cleanupIntervalS>3600</cleanupIntervalS>
+            <fsPath></fsPath>
+            <fsType>basic</fsType>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -176,17 +175,6 @@
         <autoAcceptFolders>false</autoAcceptFolders>
         <maxSendKbps>0</maxSendKbps>
         <maxRecvKbps>0</maxRecvKbps>
-        <maxRequestKiB>0</maxRequestKiB>
-        <untrusted>false</untrusted>
-        <remoteGUIPort>0</remoteGUIPort>
-    </device>
-    <device id="PFAW34M-E3U4VDE-MIAEAJZ-YPOERZV-ZVDXD3G-KMFPC6P-ERCHIYN-EZ552QF" name="manjaro-thinkpad" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
-        <address>dynamic</address>
-        <paused>false</paused>
-        <autoAcceptFolders>false</autoAcceptFolders>
-        <maxSendKbps>0</maxSendKbps>
-        <maxRecvKbps>0</maxRecvKbps>
-        <ignoredFolder time="2020-08-03T21:53:40.045Z" id="lsmcu-ytjoo" label=".ssh"></ignoredFolder>
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
@@ -252,7 +240,6 @@
         <overwriteRemoteDeviceNamesOnConnect>false</overwriteRemoteDeviceNamesOnConnect>
         <tempIndexMinBlocks>10</tempIndexMinBlocks>
         <trafficClass>0</trafficClass>
-        <defaultFolderPath>~</defaultFolderPath>
         <setLowPriority>true</setLowPriority>
         <maxFolderConcurrency>0</maxFolderConcurrency>
         <crashReportingURL>https://crash.syncthing.net/newcrash</crashReportingURL>
@@ -267,4 +254,49 @@
         <connectionLimitEnough>0</connectionLimitEnough>
         <connectionLimitMax>0</connectionLimitMax>
     </options>
+    <defaults>
+        <folder id="" label="" path="~" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+            <filesystemType>basic</filesystemType>
+            <device id="6537O3K-K5BRZTU-36QGB5V-WMUXAQS-2JAKGNL-Z5QLJ5K-CEXUREV-U43YRAR" introducedBy="">
+                <encryptionPassword></encryptionPassword>
+            </device>
+            <minDiskFree unit="%">1</minDiskFree>
+            <versioning>
+                <cleanupIntervalS>3600</cleanupIntervalS>
+                <fsPath></fsPath>
+                <fsType>basic</fsType>
+            </versioning>
+            <copiers>0</copiers>
+            <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+            <hashers>0</hashers>
+            <order>random</order>
+            <ignoreDelete>false</ignoreDelete>
+            <scanProgressIntervalS>0</scanProgressIntervalS>
+            <pullerPauseS>0</pullerPauseS>
+            <maxConflicts>10</maxConflicts>
+            <disableSparseFiles>false</disableSparseFiles>
+            <disableTempIndexes>false</disableTempIndexes>
+            <paused>false</paused>
+            <weakHashThresholdPct>25</weakHashThresholdPct>
+            <markerName>.stfolder</markerName>
+            <copyOwnershipFromParent>false</copyOwnershipFromParent>
+            <modTimeWindowS>0</modTimeWindowS>
+            <maxConcurrentWrites>2</maxConcurrentWrites>
+            <disableFsync>false</disableFsync>
+            <blockPullOrder>standard</blockPullOrder>
+            <copyRangeMethod>standard</copyRangeMethod>
+            <caseSensitiveFS>false</caseSensitiveFS>
+            <junctionsAsDirs>false</junctionsAsDirs>
+        </folder>
+        <device id="" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+            <address>dynamic</address>
+            <paused>false</paused>
+            <autoAcceptFolders>false</autoAcceptFolders>
+            <maxSendKbps>0</maxSendKbps>
+            <maxRecvKbps>0</maxRecvKbps>
+            <maxRequestKiB>0</maxRequestKiB>
+            <untrusted>false</untrusted>
+            <remoteGUIPort>0</remoteGUIPort>
+        </device>
+    </defaults>
 </configuration>
